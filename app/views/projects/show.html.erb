@@ -27,5 +27,9 @@
   <% end %>
 </p>
 
+<button><%= link_to 'Create new Task', new_project_task_path(@project, @task) %> </button>
+<br>
+<br>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

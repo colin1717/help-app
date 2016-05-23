@@ -1,33 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Name of Task:</strong>
   <%= @task.name %>
 </p>
 
 <p>
   <strong>Time commitment:</strong>
-  <%= @task.time_commitment %>
+  <%= @task.time_commitment %> hours
 </p>
-
-<p>
-  <strong>State:</strong>
-  <%= @task.state %>
-</p>
-
 <p>
   <strong>Date needed:</strong>
   <%= @task.date_needed %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @task.user_id %>
-</p>
-
 <p>
   <strong>Project:</strong>
-  <%= @task.project_id %>
+  <%= @task.project.name %>
 </p>
 
 <%= link_to 'Edit', edit_project_task_path(@project, @task) %> |
