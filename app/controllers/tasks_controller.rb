@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :set_project
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -14,7 +15,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    @task = @project.tasks.build
   end
 
   # GET /tasks/1/edit
@@ -24,12 +25,12 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = @project.tasks.build(task_params)
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render :show, status: :created, location: @task }
+        format.html { redirect_to ([@project, @task]), notice: 'Task was successfully created.' }
+        format.json { render :show, status: :created, location: ([@project, @task]) }
       else
         format.html { render :new }
         format.json { render json: @task.errors, status: :unprocessable_entity }
@@ -42,8 +43,8 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { render :show, status: :ok, location: @task }
+        format.html { redirect_to ([@project, @task]), notice: 'Task was successfully updated.' }
+        format.json { render :show, status: :ok, location: ([@project, @task]) }
       else
         format.html { render :edit }
         format.json { render json: @task.errors, status: :unprocessable_entity }
@@ -62,13 +63,19 @@ class TasksController < ApplicationController
   end
 
   private
+    def set_project
+      @project = Project.find(params[:project_id])
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      @task = @project.tasks.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
       params.require(:task).permit(:name, :time_commitment, :status, :date_needed, :user_id, :project_id)
     end
+
+
 end

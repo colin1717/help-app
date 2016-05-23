@@ -1,4 +1,4 @@
-<%= form_for(@task) do |f| %>
+<%= form_for([@project, @task]) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -23,14 +23,6 @@
   <div class="field">
     <%= f.label :date_needed %><br>
     <%= f.datetime_select :date_needed %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :project_id %><br>
-    <%= f.number_field :project_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
