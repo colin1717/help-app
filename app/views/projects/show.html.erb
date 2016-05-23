@@ -16,16 +16,15 @@
 </p>
 
 <p>
-  <strong>Owner:</strong>
-  <%= @project.owner_id %>
-</p>
-
-<p>
   <strong>Tasks:</strong>
   <% @project.tasks.each do |task| %>
     <%= task.name %>
   <% end %>
 </p>
+
+<button><%= link_to 'Create New Task', new_project_task_path(@project, @task)%></button>
+<br>
+<br>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
