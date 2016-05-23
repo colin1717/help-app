@@ -22,7 +22,7 @@
 
   <div class="field">
     <%= f.label :date_needed %><br>
-    <%= f.datetime_select :date_needed %>
+    <%= f.datetime_select :date_needed , :ampm => true, :minute_step => 15%>
   </div>
   <div class="actions">
     <%= f.submit %>
