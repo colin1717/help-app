@@ -52,6 +52,8 @@ body {
   width: auto;
   margin-top: 363px;
   background-color: $grey;
+  text-align: center;
+  color: $darkBlue;
 }
 
 .box-row {
@@ -86,8 +88,12 @@ body {
 }
 
 .project-description {
-  height: 78px;
+  height: 70px;
   background-color: $yellow;
+  padding-top: 8px;
+  color: $darkBlue;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #box1 .project-pic {
