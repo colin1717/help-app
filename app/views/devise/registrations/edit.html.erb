@@ -1,7 +1,7 @@
 <!-- use this div to style an external wrapper for edit registrations form -->
 <div>
   <div><h2>Edit <%= resource_name.to_s.humanize %></h2></div>
-
+  <div>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 
@@ -33,12 +33,18 @@
       <%= f.submit "Update" %>
     </div>
   <% end %>
+  <!-- closing tag for form wrapper -->
+  </div>
 
-  <h3>Cancel my account</h3>
-
+  <!-- wrapper for cancel account section -->
+  <div>
+  <div><h3>Cancel my account</h3></div>
   <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <!-- closing tag for wrapper on cancel account  -->
+  </div>
 
-  <%= link_to "Back", :back %>
+  <div><%= link_to "Back", :back %></div>
+
 
 <!-- closing div tag for form wrapper -->
 </div>
