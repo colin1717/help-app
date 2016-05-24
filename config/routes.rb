@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'projects/me', to: 'projects#me'
 
   resources :projects do
       resources :tasks
