@@ -1,12 +1,13 @@
 class TasksController < ApplicationController
-  before_action :set_project, except: :me
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :set_project, except: :me
+  before_action :set_task, only: [:show, :edit, :update, :destroy, :claim]
+
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.where(project_id: @project.id)
   end
 
   # GET /tasks/1
@@ -27,7 +28,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = @project.tasks.build(task_params)
-
+    @task[:state] = :open
     respond_to do |format|
       if @task.save
         format.html { redirect_to ([@project, @task]), notice: 'Task was successfully created.' }
@@ -50,6 +51,16 @@ class TasksController < ApplicationController
         format.html { render :edit }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def claim
+    @task[:state] = :claimed
+    if @task.user_id.blank?
+      @task.update_attributes(user_id: current_user.id)
+    end
+    respond_to do |format|
+      format.json { render :show, status: :ok, location: ([@project, @task]) }
     end
   end
 
@@ -79,7 +90,7 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:name, :time_commitment, :status, :date_needed, :user_id, :project_id)
+      params.require(:task).permit(:name, :time_commitment, :state, :summary, :date_needed, :user_id, :project_id)
     end
 
 

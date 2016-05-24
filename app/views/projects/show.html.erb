@@ -24,6 +24,12 @@
   <strong>Tasks:</strong>
   <% @project.tasks.each do |task| %>
     <%= task.name %>
+
+  <tr>
+    <td><button class='claim' data-id='<%= task.id %>'>
+
+    </button></td>
+  </tr>
   <% end %>
 </p>
 
