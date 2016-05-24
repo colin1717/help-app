@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_project
+  before_action :set_project, except: :me
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -53,14 +53,18 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
-  def destroy
-    @task.destroy
+    # DELETE /tasks/1
+    # DELETE /tasks/1.json
+    def destroy
+      @task.destroy
     respond_to do |format|
       format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def me
+    @tasks = Task.where(current_user.id == :id)
   end
 
   private

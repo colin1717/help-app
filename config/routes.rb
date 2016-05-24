@@ -4,6 +4,13 @@ Rails.application.routes.draw do
       resources :tasks
   end
 
+  resource :dashboard, only: [:show]
+
+  get 'tasks/me', to: 'tasks#me'
+
+  resource :dashboard, only: :index
+
+
   devise_for :users
 
 
