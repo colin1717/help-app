@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable
   has_many :tasks
   has_many :projects, through: :tasks
-  has_one :project
+  has_many :owned_projects, class_name: "Project", foreign_key: "owner_id"
 
 
   def timeout_in
