@@ -1,3 +1,7 @@
+$lightBlue: LightSteelBlue;
+$lightSlate: LightSlateGrey;
+
+
 body {
   background-color: #fff;
   color: #333;
@@ -71,3 +75,34 @@ div {
     list-style: square;
   }
 }
+
+//keyframes for hover on nav bar element
+// @mixin fade($color) {
+//
+//
+// @keyframes fade{
+//   0% {background-color: $color;}
+//   25% {background-color: darken($color, 25%);}
+//   50% {background-color: darken($color, 35%);}
+//   100% {background-color: darken($color, 50%);}
+// }
+// }
+//
+// #top-nav-bar{
+//   background-color: $lightBlue;
+// }
+//
+// .nav-ul{
+//   list-style-type: none;
+//   width: 60px;
+// }
+//
+// .nav-li{
+//   background-color: $lightBlue;
+//   float:left;
+// }
+//
+// .nav-li:hover{
+//   @include fade(LightSteelBlue);
+//   transition: all 2.0s;
+// }

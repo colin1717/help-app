@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
+<!-- the notice <p> is not inititially visible -->
+<div><p id="notice"><%= notice %></p></div>
 
-<h1>Help</h1>
+<!-- page title header... need to make dynamic or turn this into a header above the nav element -->
+<div><h1>Help</h1></div>
 
+<!-- checks to see if the user on the site is a current user -->
+<!-- wrapper div for login sign up section -->
+<div>
 <% if !current_user %>
+  <!-- note that styles are coming from the self.scaffolds stylesheed -->
   <div class='log-in-buttons'>
+
     <h2>New Users!</h2>
 
     <button> <%= link_to "Sign Up", new_user_registration_path %> </button>
@@ -38,7 +45,8 @@
       <% end %>
     </tbody>
   </table>
-
+<!-- closing div for login/sign up container -->
+</div>
   <br>
   <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
   <%= link_to 'New Project', new_project_path %>
