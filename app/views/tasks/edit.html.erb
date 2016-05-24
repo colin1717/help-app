@@ -1,6 +1,10 @@
-<h1>Editing Task</h1>
 
-<%= render 'form' %>
+<div><h1>Editing Task</h1></div>
 
+<!-- placing external form element wrapper -->
+<div><%= render 'form' %></div>
+
+<div>
 <%= link_to 'Show', ([@project, @task]) %> |
 <%= link_to 'Back', project_tasks_path %>
+</div>

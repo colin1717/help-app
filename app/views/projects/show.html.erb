@@ -1,31 +1,37 @@
-<p id="notice"><%= notice %></p>
+<!-- create box for project and create background color -->
+<div>
+    <p>
+      <strong>Name:</strong>
+      <%= @project.name %>
+    </p>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div>
+  <p>
+    <strong>Summary:</strong>
+    <%= @project.summary %>
+  </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @project.summary %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @project.location %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @project.location %>
-</p>
+  <p>
+    <strong>Owner:</strong>
+    <%= @project.owner_id %>
+  </p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @project.owner_id %>
-</p>
+  <p>
+    <strong>Tasks:</strong>
+    <% @project.tasks.each do |task| %>
+      <%= task.name %>
+    <% end %>
+  </p>
+<!-- end project wrapper container -->
+</div>
 
-<p>
-  <strong>Tasks:</strong>
-  <% @project.tasks.each do |task| %>
-    <%= task.name %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
+</div>
