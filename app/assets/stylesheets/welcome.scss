@@ -1,6 +1,11 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$yellow: #d7c834;
+$darkBlue: #3a3853;
+$grey: #cbc5bb;
+$lightBlue: #55649d;
+
 body {
   margin: 0;
 }
@@ -43,9 +48,10 @@ body {
 }
 
 .boxes {
-  height: 275px;
+  height: 280px;
   width: auto;
   margin-top: 363px;
+  background-color: $grey;
 }
 
 .box-row {
@@ -65,5 +71,42 @@ body {
   width: 23%;
   background-color: pink;
   border: 2px solid black;
-  border-radius: 5px;
+  //border-radius: 5px;
+  opacity: .7;
+
+    &:hover {
+    opacity: 1;
+  }
 }
+
+.project-pic {
+  height: 160px;
+  background-color: yellow;
+  border-bottom: 2px solid black;
+}
+
+.project-description {
+  height: 98px;
+  background-color: $yellow;
+}
+
+#box1 .project-pic {
+  background-image: url(/assets/welcome/soup.jpg);
+  background-size: 100% 100%;
+}
+
+#box2 .project-pic {
+  background-image: url(/assets/welcome/graf.jpg);
+  background-size: auto 100%;
+}
+
+#box3 .project-pic {
+  background-image: url(/assets/welcome/rec-center.jpg);
+  background-size: 100% 100%;
+}
+
+#box4 .project-pic {
+  background-image: url(/assets/welcome/park.jpg);
+  background-size: 100% 100%;
+}
+
