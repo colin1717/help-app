@@ -1,0 +1,39 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+}
+
+.hero {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  background-color: transparentize(pink, 0.3);
+  background-image: url(/assets/hero.png);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.get-started {
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  margin-top: 22%;
+  padding-top: 10px;
+  border: 2px solid white;
+  color: white;
+
+ &:hover {
+  background-color: transparentize(white, 0.6);
+  }
+}
+
+.boxes {
+  height: 400px;
+  width: auto;
+  margin-top: 300px;
+  background-color: transparentize(blue, 0.3);
+}
