@@ -1,0 +1,11 @@
+<% @projects.each do |project| %>
+<p>
+  <tr>
+    <td><%= project.name %></td>
+    <br>
+    <td><%= project.summary %></td>
+    <br>
+    <td><%= project.location %></td>
+  </tr>
+</p>
+<% end %>
