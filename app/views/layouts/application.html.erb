@@ -11,19 +11,18 @@
 <!-- container div -->
 <div>
   <!-- nav div -->
-  <div>
-    <ul>
-      <li>Link 1</li>
-      <li>Link 2</li>
-      <li>Link 3</li>
+  <div class = "row">
+    <ul id="nav">
+      <li><%= link_to "Log In", new_user_session_path %></li>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
     </ul>
   </div>
 
 
-<%= yield %>
+ <%= yield %>
 
 <!-- footer div -->
-<div>
+<div class="row">
   <div>About HelpApp</div>
   <div>Contact Us</div>
   <!-- add social icons with share links in get social div -->
