@@ -48,14 +48,14 @@ body {
 }
 
 .boxes {
-  height: 280px;
+  height: 300px;
   width: auto;
   margin-top: 363px;
   background-color: $grey;
 }
 
 .box-row {
-  padding-top: 8px;
+  padding-top: 20px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -80,13 +80,13 @@ body {
 }
 
 .project-pic {
-  height: 160px;
+  height: 180px;
   background-color: yellow;
   border-bottom: 2px solid black;
 }
 
 .project-description {
-  height: 98px;
+  height: 78px;
   background-color: $yellow;
 }
 
