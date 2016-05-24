@@ -13,6 +13,17 @@ body {
   background-image: url(/assets/hero.png);
   background-size: cover;
   background-position: center bottom;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  width: 350px;
+  margin: auto;
+  margin-top: 25px;
+  padding-left: 2%;
 }
 
 .get-started {
@@ -21,7 +32,7 @@ body {
   width: 100px;
   height: 30px;
   margin: auto;
-  margin-top: 22%;
+  margin-top: 11%;
   padding-top: 10px;
   border: 2px solid white;
   color: white;
@@ -32,8 +43,27 @@ body {
 }
 
 .boxes {
-  height: 400px;
+  height: 300px;
   width: auto;
-  margin-top: 300px;
-  background-color: transparentize(blue, 0.3);
+  margin-top: 363px;
+}
+
+.box-row {
+  padding-top: 5px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.box {
+  display: inline-block;
+  margin: 0 4px 0 4px;
+  height: 250px;
+  width: 23%;
+  background-color: pink;
+  border: 2px solid black;
+  border-radius: 5px;
 }
