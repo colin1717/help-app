@@ -64,7 +64,7 @@ class TasksController < ApplicationController
   end
 
   def me
-    @tasks = Task.where(current_user.id == :id)
+    @tasks = Task.where(user_id: current_user.id)
   end
 
   private
