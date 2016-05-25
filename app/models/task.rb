@@ -6,19 +6,18 @@ class Task < ActiveRecord::Base
   validates :time_commitment, numericality: true, presence: true
   validates :summary, length: { minimum: 2, maximum: 200 }
 
-  state_machine :state, initial: :open do
+  def open!
+    self.state = 'opened'
+  end
 
-    event :claim do
-      transition :open => :claimed
-    end
+  def claim!
+    self.state = 'claimed'
+    self.save
+  end
 
-    event :review do
-      transition :claimed => :reviewed
-    end
-
-    event :complete do
-      transition :reviewed => :completed
-    end
+  def complete!
+    self.state = 'completed'
+    self.save
   end
 
 end

@@ -1,10 +1,16 @@
+<h2> <strong>My Tasks:</strong></h2>
+
 <% @tasks.each do |task| %>
+
 <p>
+
   <tr>
     <td><%= task.name %></td>
-    <td><%= task.state %></td>
-    <td><%= task.user_id %></td>
-    <td><%= task.project_id %></td>
+  </tr>
+  <tr>
+    <td><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project.id %>' ></button></td>
   </tr>
 </p>
 <% end %>
+
+<button><%= link_to 'Browse', projects_path %></button>
