@@ -6,7 +6,7 @@
     <td><strong><%= task.project.name %></strong></td>
   </tr>
   <tr>
-    <td><p class="task-name" id='<%= task.id %>'><%= task.name %></p></td>
+    <td><p class="task-name <%=task.state == 'completed' ? 'strike' : ""  %>" id='<%= task.id %>'><%= task.name %></p></td>
   </tr>
   <tr>
     <td><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project.id %>' >Completed!</button></td>
