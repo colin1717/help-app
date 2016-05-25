@@ -5,10 +5,8 @@
 @import '_fonts';
 @import '_grid';
 
-body {
-  color: black;
+.strike {
+  text-decoration: line-through;
+  color: green;
 
-  a {
-    color: black;
-  }
-}
+

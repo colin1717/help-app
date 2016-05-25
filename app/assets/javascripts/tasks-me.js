@@ -19,5 +19,6 @@ $(document).ready(function($) {
      console.log("complete");
    });
 
+   $('#'+ taskId).toggleClass('strike');
   })
 });

@@ -1,16 +1,20 @@
-<h2> <strong>My Tasks:</strong></h2>
-
+<h2><strong>My Tasks:</strong></h2>
+<table>
 <% @tasks.each do |task| %>
-
 <p>
-
   <tr>
-    <td><%= task.name %></td>
+    <td><strong><%= task.project.name %></strong></td>
   </tr>
   <tr>
-    <td><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project.id %>' ></button></td>
+    <td><p class="task-name <%=task.state == 'completed' ? 'strike' : ""  %>" id='<%= task.id %>'><%= task.name %></p></td>
+  </tr>
+  <tr>
+    <td><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project.id %>' >Completed!</button></td>
   </tr>
 </p>
 <% end %>
 
+</table>
+
 <button><%= link_to 'Browse', projects_path %></button>
+<button><%= link_to 'Dashboard', dashboard_path %></button>
