@@ -7,7 +7,7 @@
 
 body {
   margin: 0 auto;
-  background-color: $dkBlue;
+  background-color: lighten($dkBlue, 75%);
   color: white;
   font-family: $base-font-family;
   font-size: $base-font-size;
