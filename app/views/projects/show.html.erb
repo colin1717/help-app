@@ -1,4 +1,8 @@
 <%= notice %>
+<div class="farts">
+<%= current_user.id %>
+<%= @project.owner_id %>
+</div>
 
 <div class="project-page">
   <div class="project-info">
@@ -32,7 +36,10 @@
       <% end %>
     <% end %>
 
-    <button id='add-task'>Add Task</button>
+    <% if current_user.id == @project.owner_id %>
+      <button id='add-task'>Add Task</button>
+    <% end %>
+
   </div>
 
   <div class="space"></div>

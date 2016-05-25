@@ -5,10 +5,18 @@
 @import '_fonts';
 @import '_grid';
 
+.farts {
+  color: black;
+}
+
 .project-page {
   background-color: $grey;
   text-align: center;
   color: black;
+
+  li {
+    list-style-type: none;
+  }
 }
 
 .project-info {
