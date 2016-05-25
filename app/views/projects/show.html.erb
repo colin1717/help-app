@@ -1,8 +1,4 @@
 <%= notice %>
-<div class="farts">
-<%= current_user.id %>
-<%= @project.owner_id %>
-</div>
 
 <div class="project-page">
   <div class="project-info">
@@ -28,10 +24,10 @@
     <h3>Available Tasks</h3>
 
     <% if @project.tasks.length > 0 %>
-      <%= @project.tasks.each do |task| %>
+      <% @project.tasks.each do |task| %>
     <ul>
       <li><%= task.name %></li>
-      <li><%= task.time_commitment %></li>
+      <li><%= task.time_commitment %> hours</li>
     </ul>
       <% end %>
     <% end %>
@@ -47,13 +43,12 @@
   <hr>
 
   <div class="tasks-in-progress">
-    <h3>Tasks that are already claimed</h3>
+    <h3>Claimed Tasks</h3>
 
     <% if @project.tasks.length > 0 %>
-      <%= @project.tasks.each do |task| %>
+      <% @project.tasks.each do |task| %>
         <ul>
           <li><%= task.name %></li>
-          <li><%= task.user_id %></li>
         </ul>
       <% end %>
     <% end %>
