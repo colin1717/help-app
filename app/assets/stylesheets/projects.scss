@@ -4,3 +4,38 @@
 @import '_colors';
 @import '_fonts';
 @import '_grid';
+
+.project-page {
+  background-color: $grey;
+  text-align: center;
+  color: black;
+}
+
+.project-info {
+  color: black;
+  font-family: $base-font-family;
+  background-color: $grey;
+  width: 400px;
+  margin: auto;
+  padding-top: 10px;
+
+  h2 {
+    font-weight: $bold;
+
+  }
+}
+
+.available-tasks {
+  color: black;
+}
+
+#add-task {
+  float: right;
+  margin-top: 50px;
+  margin-right: 35%;
+  //display: none;
+}
+
+.space {
+  height: 75px;
+}

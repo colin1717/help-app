@@ -1,37 +1,59 @@
-<p id="notice"><%= notice %></p>
+<%= notice %>
 
-<div class="project-info">
+<div class="project-page">
+  <div class="project-info">
 
-  <div class="name">
-    <h3 id="project-name"><%= @project.name %></h3>
+    <div class="name">
+      <div id="project-name"><h2><%= @project.name %></h2></div>
+    </div>
+
+    <div class="summary">
+
+      <p id="project-summary"><%= @project.summary %></p>
+    </div>
+
+    <div class="location">
+      <p id="location"><%= @project.location %></p>
+    </div>
+
   </div>
 
-  <div class="summary">
-    <p id="project-summary"><%= @project.summary %></p>
-  </div>
+  <hr>
 
-  <div class="location">
-    <p id="location"><%= @project.location %></p>
-  </div>
+  <div class="available-tasks">
+    <h3>Available Tasks</h3>
 
-</div>
-
-
-
-<div class="available-tasks">
-  <h3>Available Tasks</h3>
-
-  <% if @project.tasks.length > 0 %>
-    <%= @project.tasks.each do |task| %>
-  <ul>
-    <li><%= task.name %></li>
-    <li><%= task.time_commitment %></li>
-  </ul>
+    <% if @project.tasks.length > 0 %>
+      <%= @project.tasks.each do |task| %>
+    <ul>
+      <li><%= task.name %></li>
+      <li><%= task.time_commitment %></li>
+    </ul>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <button id='add-task'>Add Task</button>
+    <button id='add-task'>Add Task</button>
+  </div>
+
+  <div class="space"></div>
+
+  <hr>
+
+  <div class="tasks-in-progress">
+    <h3>Tasks that are already claimed</h3>
+
+    <% if @project.tasks.length > 0 %>
+      <%= @project.tasks.each do |task| %>
+        <ul>
+          <li><%= task.name %></li>
+          <li><%= task.user_id %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="space"></div>
+
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
 </div>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
