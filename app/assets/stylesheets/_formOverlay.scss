@@ -29,6 +29,7 @@
   background-color: lighten($mdBlue,20%);
   padding: 1.5em;
   width: 25em;
+  border-radius: .7em;
 
   input{
     // margin-left: 2em;
@@ -55,4 +56,14 @@
   text-align: center;
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
+}
+
+.hero-overlay-bg{
+  position: absolute;
+  width: 100%;
+  background-image: url(/assets/hero.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-blend-mode: overlay;
+  background-color: transparentize($grey,.35);
 }
