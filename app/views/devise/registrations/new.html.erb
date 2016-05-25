@@ -1,11 +1,17 @@
 <!-- this is the correct sheet to edit for the signup form -->
 
 
-
-  <div class="col-8" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
+<div class="row">
+  <div class="col-3"><p></p></div>
+  <div class="col-6" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
   <!-- use this div as an internal wrapper for elements on signup form -->
+  <div class="row">
+  <div class="col-1"><p></p></div>
+  <div class="col-10" id="deviseWrapperInside">
 
-  <div class="col-8" id="deviseWrapperInside">
+    <div class="row">
+      <div class="col-3"><p></p></div>
+      <div class="col-6">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
@@ -15,7 +21,7 @@
     </div>
 
     <div class="field fieldWrapper">
-      <%= f.label :password %>
+      <h3 class='form-label'><%= f.label :password %></h3>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
@@ -23,15 +29,22 @@
     </div>
 
     <div class="field fieldWrapper">
-      <%= f.label :password_confirmation %><br />
+      <h3 class='form-label'><%= f.label :password_confirmation %><br /></h3>
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-    <div class="actions fieldWrapper right">
-      <%= f.submit "Sign up" %>
+    <div class="actions fieldWrapper">
+      <div id="signUpBtn"><%= f.submit "Sign up" %></div>
     </div>
   <% end %>
   </div>
   </div>
+    <div class="col-3"><p></p></div>
+  </div>
+      <div class="col-1"><p></p></div>
+      </div>
+  </div>
+  <div class="col-3"><p></p></div>
+</div>
 
 <!-- <%= render "devise/shared/links" %> -->
