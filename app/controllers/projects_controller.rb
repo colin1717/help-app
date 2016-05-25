@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @tasks = Task.where(project_id: params[:id])
+    @open = Task.where(project_: params[:id], state: 'opened')
+    @claimed = Task.where(project_: params[:id], state: 'claimed')
+    @completed = Task.where(project_: params[:id], state: 'completed')
   end
 
   # GET /projects/new
