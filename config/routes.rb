@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :tasks do
         member do
           put 'claim'
+          put 'complete'
         end
       end
   end

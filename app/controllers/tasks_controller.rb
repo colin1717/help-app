@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_project, except: :me
-  before_action :set_task, only: [:show, :edit, :update, :destroy, :claim]
+  before_action :set_task, only: [:show, :edit, :update, :destroy, :claim, :complete]
 
 
   # GET /tasks
@@ -58,6 +58,16 @@ class TasksController < ApplicationController
     @task[:state] = :claimed
     if @task.user_id.blank?
       @task.update_attributes(user_id: current_user.id)
+    end
+    respond_to do |format|
+      format.json { render :show, status: :ok, location: ([@project, @task]) }
+    end
+  end
+
+  def complete
+    @task[:state] = :completed
+    if @task[:state] = :claimed
+      @task.update_attributes(state: :completed)
     end
     respond_to do |format|
       format.json { render :show, status: :ok, location: ([@project, @task]) }
