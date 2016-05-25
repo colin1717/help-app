@@ -5,6 +5,9 @@
     content:'';
 }
 
+
+
+
 //----- Grid System
 $grid-spacing:3%;
 
@@ -18,7 +21,7 @@ $grid-spacing:3%;
 
     & + & {
       //   margin-top:$grid-spacing;
-      //changed this to 0 auto from $grid-spacing to bring divs directly up against eachother 
+      //changed this to 0 auto from $grid-spacing to bring divs directly up against eachother
         margin-top: 0 auto;
     }
 }

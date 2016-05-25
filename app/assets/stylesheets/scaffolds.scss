@@ -3,53 +3,12 @@
 @import '_fonts';
 @import '_grid';
 
-#deviseWrapperOutside{
-  background-color: lighten($mdBlue,20%);
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
 
-#deviseWrapperInside{
-  background-color: lighten($mdBlue,20%);
-  margin-left: 40%;
-  margin-right: 20%;
-
-  #emailField{
-    margin: 0 auto;
-    height: auto;
-
-    &.form-label{
-      color: $dkBlue;
-      text-align: left;
-    }
-    &.form-input{
-      width: 2em;
-      height: .5em;
-      background-color: lighten($grey, 50%);
-      border-style: inset;
-      border-color: darken($grey,55%);
-      border-radius: .5em;
-    }
-  }
-}
-
-// #emptyOverlayBg{
-//   background-color: darken($grey,20%);
-// }
-
-#FormTitleArea{
-  background-color: darken($mdBlue,25%);
-  color: #fff;
-  text-align: center;
-
-}
 
 body {
   margin: 0 auto;
-  background-color: #fff;
-  color: #333;
+  background-color: $dkBlue;
+  color: white;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -68,15 +27,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: white;
 
   &:visited {
-    color: #666;
+    color: lighten($mdBlue,50%);
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: $dkBlue;
+    background-color: lighten($mdBlue, 60%);
   }
 }
 
@@ -120,34 +79,3 @@ div {
     list-style: square;
   }
 }
-
-//keyframes for hover on nav bar element
-// @mixin fade($color) {
-//
-//
-// @keyframes fade{
-//   0% {background-color: $color;}
-//   25% {background-color: darken($color, 25%);}
-//   50% {background-color: darken($color, 35%);}
-//   100% {background-color: darken($color, 50%);}
-// }
-// }
-//
-// #top-nav-bar{
-//   background-color: $lightBlue;
-// }
-//
-// .nav-ul{
-//   list-style-type: none;
-//   width: 60px;
-// }
-//
-// .nav-li{
-//   background-color: $lightBlue;
-//   float:left;
-// }
-//
-// .nav-li:hover{
-//   @include fade(LightSteelBlue);
-//   transition: all 2.0s;
-// }
