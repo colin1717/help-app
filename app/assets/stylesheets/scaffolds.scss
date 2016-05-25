@@ -9,7 +9,7 @@
 body {
   margin: 0 auto;
   background-color: lighten($dkBlue, 75%);
-  color: white;
+  color: black;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -80,3 +80,4 @@ div {
     list-style: square;
   }
 }
+
