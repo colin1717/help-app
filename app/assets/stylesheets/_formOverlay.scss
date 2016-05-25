@@ -9,22 +9,23 @@
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 1em;
+  border-radius: .5em;
+  box-shadow: 7px 0 7px -7px black,
+  -7px 0 7px -7px black;
 
 
 #deviseWrapperInside{
   background-color: lighten($mdBlue,20%);
-  // margin-left: 20%;
-  // margin-right: 20%;
-
-  // .fieldWrapper{
-  //   margin-left:5em;
-  //   height: auto;
-  // }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5em;
+  box-shadow: 3px 0 3px -3px black,
+  -3px 0 3px -3px black;
 }
 }
 
 #new_user{
-
   background-color: lighten($mdBlue,20%);
   padding: 1.5em;
   width: 25em;
@@ -35,18 +36,16 @@
     width: 25em;
     height: 2em;
     border-style: inset;
-    border-color: darken($grey,55%);
+    border-color: transparentize($grey,.3);
     border-radius: .5em;
   }
 }
 
 
-
-// #emptyOverlayBg{
-//   background-color: darken($grey,20%);
-// }
-
 #FormTitleArea{
+  display:flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 0;
   height: 1.5em;
   padding-top: .5em;
@@ -54,5 +53,6 @@
   background-color: transparentize($mdBlue, .35);
   color: #fff;
   text-align: center;
-
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
 }
