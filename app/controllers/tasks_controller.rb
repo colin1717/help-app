@@ -22,6 +22,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    render :layout => nil
   end
 
   # POST /tasks

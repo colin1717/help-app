@@ -1,60 +1,67 @@
 <%= notice %>
 
 <div class="project-page">
-  <div class="project-info">
+  <div class="project-and-tasks">
+      <div class="project-info">
 
-    <div class="name">
-      <div id="project-name"><h2><%= @project.name %></h2></div>
-    </div>
+        <div class="name">
+          <div id="project-name"><h2><%= @project.name %></h2></div>
+        </div>
 
-    <div class="summary">
+        <div class="summary">
 
-      <p id="project-summary"><%= @project.summary %></p>
-    </div>
+          <p id="project-summary"><%= @project.summary %></p>
+        </div>
 
-    <div class="location">
-      <p id="location"><%= @project.location %></p>
-    </div>
+        <div class="location">
+          <p id="location"><%= @project.location %></p>
+        </div>
 
-  </div>
+      </div>
 
-  <hr>
+      <hr>
 
-  <div class="available-tasks">
-    <h3>Available Tasks</h3>
+      <div class="available-tasks">
+        <h3>Available Tasks</h3>
 
-    <% if @project.tasks.length > 0 %>
-      <% @project.tasks.each do |task| %>
-    <ul>
-      <li><%= task.name %></li>
-      <li><%= task.time_commitment %> hours</li>
-    </ul>
-      <% end %>
-    <% end %>
-
-    <% if current_user.id == @project.owner_id %>
-      <button id='add-task'>Add Task</button>
-    <% end %>
-
-  </div>
-
-  <div class="space"></div>
-
-  <hr>
-
-  <div class="tasks-in-progress">
-    <h3>Claimed Tasks</h3>
-
-    <% if @project.tasks.length > 0 %>
-      <% @project.tasks.each do |task| %>
-        <ul>
+        <% if @project.tasks.length > 0 %>
+          <% @project.tasks.each do |task| %>
+        <ul id='task<%= task.id %>'>
           <li><%= task.name %></li>
+          <li><%= task.time_commitment %> hours</li>
+            <% if current_user.id == @project.owner_id %>
+            <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+            <% end %>
         </ul>
-      <% end %>
-    <% end %>
-  </div>
+          <% end %>
+        <% end %>
 
-  <div class="space"></div>
+        <% if current_user.id == @project.owner_id %>
+          <button id='add-task'>Add Task</button>
+
+        <% end %>
+
+      </div>
+
+      <div class="space"></div>
+
+      <hr>
+
+      <div class="tasks-in-progress">
+        <h3>Claimed Tasks</h3>
+
+        <% if @project.tasks.length > 0 %>
+          <% @project.tasks.each do |task| %>
+            <ul>
+              <li><%= task.name %></li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="space"></div>
+    </div>
+  <div id="edit-form" class='hidden'></div>
 
   <%= link_to 'Edit', edit_project_path(@project) %> |
   <%= link_to 'Back', projects_path %>
