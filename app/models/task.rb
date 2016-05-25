@@ -6,38 +6,18 @@ class Task < ActiveRecord::Base
   validates :time_commitment, numericality: true, presence: true
   validates :summary, length: { minimum: 2, maximum: 200 }
 
-  attr_accessor :state
-  state_machine :state, initial: :open do
-
-    state :open
-    state :claimed
-    state :completed
-
-    event :claim do
-      transition :open => :claimed
-    end
-
-    event :complete do
-      transition :claimed => :completed
-    end
-
-    state :open do
-      def open?
-        true
-      end
-    end
-
-    state :claimed do
-      def claimed?
-        true
-      end
-    end
-
-    state :completed do
-      def completed?
-        true
-      end
-    end
-
+  def open!
+    self.state = 'opened'
   end
+
+  def claim!
+    self.state = 'claimed'
+    self.save
+  end
+
+  def complete!
+    self.state = 'completed'
+    self.save
+  end
+
 end

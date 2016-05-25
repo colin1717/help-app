@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = @project.tasks.build(task_params)
-    @task[:state] = :open
+    @task.open!
     respond_to do |format|
       if @task.save
         format.html { redirect_to ([@project, @task]), notice: 'Task was successfully created.' }
@@ -55,9 +55,9 @@ class TasksController < ApplicationController
   end
 
   def claim
-    @task[:state] = :claimed
     if @task.user_id.blank?
       @task.update_attributes(user_id: current_user.id)
+      @task.claim!
     end
     respond_to do |format|
       format.json { render :show, status: :ok, location: ([@project, @task]) }
@@ -65,10 +65,7 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @task[:state] = :completed
-    if @task[:state] = :claimed
-      @task.update_attributes(state: :completed)
-    end
+    @task.complete!
     respond_to do |format|
       format.json { render :show, status: :ok, location: ([@project, @task]) }
     end
@@ -100,7 +97,7 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:name, :time_commitment, :state, :summary, :date_needed, :user_id, :project_id)
+      params.require(:task).permit(:name, :time_commitment, :summary, :date_needed, :user_id, :project_id)
     end
 
 
