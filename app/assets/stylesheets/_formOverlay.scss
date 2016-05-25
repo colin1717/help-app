@@ -26,7 +26,7 @@
 }
 
 #new_user{
-  background-color: lighten($mdBlue,20%);
+  background-color: lighten($dBlue,20%);
   padding: 1.5em;
   width: 25em;
   border-radius: .7em;
@@ -54,8 +54,8 @@
   background-color: transparentize($mdBlue, .35);
   color: #fff;
   text-align: center;
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
+  border-top-left-radius: .35em;
+  border-top-right-radius: .35em;
 }
 
 .hero-overlay-bg{
@@ -65,5 +65,5 @@
   background-size: cover;
   background-position: center bottom;
   background-blend-mode: overlay;
-  background-color: transparentize($grey,.35);
+  background-color: transparentize(black,.95);
 }
