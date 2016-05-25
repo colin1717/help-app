@@ -1,12 +1,15 @@
-<button>
-  <%= link_to "Create a New Project", new_project_path %>
-</button>
-<button>
-  <%= link_to "Manage My Projects", projects_me_path %>
-</button>
-<button>
-  <%= link_to "My Tasks", tasks_me_path %>
-</button>
-<button>
-  <%= link_to "Browse Current Projects", projects_path %>
-</button>
+
+<div class="row" id="dash-nav">
+  <button class="dash-btn" id="create-proj">
+    <%= link_to "Create a New Project", new_project_path %>
+  </button>
+  <button class="dash-btn" id="manage-proj">
+    <%= link_to "Manage My Projects", projects_me_path %>
+  </button>
+  <button class="dash-btn" id="my-tasks">
+    <%= link_to "My Tasks", tasks_me_path %>
+  </button>
+  <button class="dash-btn" id="browse-proj">
+    <%= link_to "Browse Current Projects", projects_path %>
+  </button>
+</div>

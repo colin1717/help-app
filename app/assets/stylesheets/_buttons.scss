@@ -1,0 +1,28 @@
+@import '_colors';
+@import '_fonts';
+@import '_grid';
+
+//button for navigating the dashboard menu
+
+.dash-btn{
+  background-color: $yellow;
+  margin-left: 2em;
+  margin-right: 2em;
+  height: 5em;
+  width: 15em;
+  transition: background-color 0.4s;
+    &:hover{
+      background-color: $grey;
+    }
+  a{
+    text-decoration: none;
+    color: $dkBlue;
+    font-family: inherit;
+    font-size-adjust: auto;
+    background-color: transparent;
+    transition: background-color 0.4s;
+      &:hover{
+        background-color: $grey;
+      }
+    }
+  }
