@@ -1,10 +1,10 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$yellow: #d7c834;
-$darkBlue: #3a3853;
-$grey: #cbc5bb;
-$lightBlue: #55649d;
+
+@import '_colors';
+@import '_fonts';
+@import '_grid';
 
 
 body {
@@ -53,7 +53,7 @@ body {
   margin-top: 363px;
   background-color: $grey;
   text-align: center;
-  color: $darkBlue;
+  color: $dkBlue;
 }
 
 .box-row {
@@ -83,7 +83,7 @@ body {
 
 .project-pic {
   height: 180px;
-  background-color: yellow;
+  background-color: $yellow;
   border-bottom: 2px solid black;
 }
 
@@ -91,7 +91,7 @@ body {
   height: 70px;
   background-color: $yellow;
   padding-top: 8px;
-  color: $darkBlue;
+  color: $dkBlue;
   padding-left: 4px;
   padding-right: 4px;
 }

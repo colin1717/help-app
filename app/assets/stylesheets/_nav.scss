@@ -1,5 +1,5 @@
-@import 'partials/_colors.scss';
-@import 'partials/_fonts.scss';
+@import '_colors';
+@import '_fonts';
 
 #nav{
   background-color: $grey;
@@ -10,7 +10,7 @@
 
   li{
       display:inline;
-      padding:1.5em;
+      padding:.5em;
       color: $dkBlue
 
   }

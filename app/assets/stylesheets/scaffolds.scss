@@ -5,9 +5,49 @@
 
 #deviseWrapperOutside{
   background-color: lighten($mdBlue,20%);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#deviseWrapperInside{
+  background-color: lighten($mdBlue,20%);
+  margin-left: 40%;
+  margin-right: 20%;
+
+  #emailField{
+    margin: 0 auto;
+    height: auto;
+
+    &.form-label{
+      color: $dkBlue;
+      text-align: left;
+    }
+    &.form-input{
+      width: 2em;
+      height: .5em;
+      background-color: lighten($grey, 50%);
+      border-style: inset;
+      border-color: darken($grey,55%);
+      border-radius: .5em;
+    }
+  }
+}
+
+// #emptyOverlayBg{
+//   background-color: darken($grey,20%);
+// }
+
+#FormTitleArea{
+  background-color: darken($mdBlue,25%);
+  color: #fff;
+  text-align: center;
+
 }
 
 body {
+  margin: 0 auto;
   background-color: #fff;
   color: #333;
   font-family: $base-font-family;

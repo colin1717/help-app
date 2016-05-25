@@ -1,16 +1,17 @@
 <!-- this is the correct sheet to edit for the signup form -->
 
-<!-- use this div to style an external wrapper for the signup form -->
-<div id="deviseWrapperOutside">
-  <div><h2>Sign up for HelpApp</h2></div>
+
+
+  <div class="col-8" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
   <!-- use this div as an internal wrapper for elements on signup form -->
-  <div>
+
+  <div class="col-8" id="deviseWrapperInside">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+    <div class="field" id="emailField">
+      <h3 class="form-label"><%= f.label :email %><br /></h3>
+      <div class="form-input"><%= f.email_field :email, autofocus: true %></div>
     </div>
 
     <div class="field">
@@ -30,8 +31,7 @@
       <%= f.submit "Sign up" %>
     </div>
   <% end %>
-  <!-- closing div for form wrapper -->
   </div>
-<!-- closing div for signup wrapper -->
-</div>
+  </div>
+
 <%= render "devise/shared/links" %>
