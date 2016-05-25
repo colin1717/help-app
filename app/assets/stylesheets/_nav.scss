@@ -1,0 +1,19 @@
+@import '_colors';
+@import '_fonts';
+@import '_grid';
+
+#nav{
+  background-color: opacify($dkBlue, .8);
+  list-style:none;
+  margin:0 auto;
+  padding:1em;
+  text-align:right;
+  box-shadow: 0 5px 4px -4px black;
+
+  li{
+      display:inline;
+      padding:.5em;
+      color: white;
+
+  }
+}
