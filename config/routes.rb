@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   get 'tasks/me', to: 'tasks#me'
 
-  resource :dashboard, only: :index
 
   devise_for :users, controllers: { registrations: "registrations" }
 
