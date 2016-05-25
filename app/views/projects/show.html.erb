@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div class="project-info">
 
-<p>
-  <strong>Summary:</strong>
-  <%= @project.summary %>
-</p>
+  <div class="name">
+    <h3 id="project-name"><%= @project.name %></h3>
+  </div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @project.location %>
-</p>
+  <div class="summary">
+    <p id="project-summary"><%= @project.summary %></p>
+  </div>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @project.owner_id %>
-</p>
+  <div class="location">
+    <p id="location"><%= @project.location %></p>
+  </div>
 
-<p>
-  <strong>Tasks:</strong>
-  <% @project.tasks.each do |task| %>
-    <%= task.name %>
+</div>
 
-  <tr>
-    <td><button class='claim' data-id='<%= task.id %>'>
 
-    </button></td>
-  </tr>
+
+<div class="available-tasks">
+  <h3>Available Tasks</h3>
+
+  <% if @project.tasks.length > 0 %>
+    <%= @project.tasks.each do |task| %>
+  <ul>
+    <li><%= task.name %></li>
+    <li><%= task.time_commitment %></li>
+  </ul>
+    <% end %>
   <% end %>
-</p>
+
+  <button id='add-task'>Add Task</button>
+</div>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
