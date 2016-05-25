@@ -21,7 +21,6 @@ $(".edit-task").click(function(){
     .fail(function(error, textStatus){
       console.log(error);
     })
-
   });
 
 });
