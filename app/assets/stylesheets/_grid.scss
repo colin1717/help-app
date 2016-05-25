@@ -5,14 +5,24 @@
     content:'';
 }
 
+
+
+
 //----- Grid System
 $grid-spacing:3%;
+
+.grid-container{
+    @extend %clearfix;
+    width: 100%;
+   }
 
 .row {
     @extend %clearfix;
 
     & + & {
-        margin-top:$grid-spacing;
+      //   margin-top:$grid-spacing;
+      //changed this to 0 auto from $grid-spacing to bring divs directly up against eachother
+        margin-top: 0 auto;
     }
 }
 

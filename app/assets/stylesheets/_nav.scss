@@ -1,0 +1,25 @@
+@import '_colors';
+@import '_fonts';
+@import '_grid';
+
+#nav{
+  background-color: opacify($dkBlue, .8);
+  list-style:none;
+  margin:0 auto;
+  padding:1em;
+  text-align:right;
+  box-shadow: 0 5px 4px -4px black;
+
+  //changed li to button
+  .nav-buttons{
+      display:inline;
+
+      background-color: $grey;
+      padding: .5em;
+      margin-bottom: .5em;
+      a{
+        text-decoration: none;
+        color: darken($dkBlue, 10%);
+      }
+  }
+}

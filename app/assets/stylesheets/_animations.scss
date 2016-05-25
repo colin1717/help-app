@@ -1,0 +1,14 @@
+@import '_colors';
+@import '_fonts';
+@import '_grid';
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    visibility: hidden;
+  }
+  to{
+    opacity: 1;
+    visibility: visible;
+  }
+}

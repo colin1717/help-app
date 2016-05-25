@@ -8,14 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<!-- container div -->
-<div>
+<!-- grid wrapper div -->
+<div class="grid-container">
+
   <!-- nav div -->
-  <div class = "row">
-    <ul id="nav">
-      <li><%= link_to "Log In", new_user_session_path %></li>
-      <li><%= link_to "Sign Up", new_user_registration_path %></li>
-    </ul>
+  <div class = "row" id="nav">
+    <% if !current_user %>
+      <!-- note that styles are coming from the self.scaffolds stylesheed -->
+      <div>
+        <button class='nav-buttons'> <%= link_to "Sign Up", new_user_registration_path %> </button>
+        <button class="nav-buttons"> <%= link_to "Log In", new_user_session_path %> </button>
+    <% else %>
+      <button class="nav-buttons"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
+    <% end %>
   </div>
 
 
@@ -23,12 +28,13 @@
 
 <!-- footer div -->
 <div class="row">
-  <div>About HelpApp</div>
-  <div>Contact Us</div>
-  <!-- add social icons with share links in get social div -->
-  <div>Get Social</div>
+  <ul  id="footer">
+    <li>About Crowd Care</li>
+    <li>Contact Us</li>
+    <li>Get Social</li>
+  </ul>
 </div>
-<!-- container div closing tag -->
+<!-- grid wrapper div closing tag -->
 </div>
 </body>
 </html>
