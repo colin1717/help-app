@@ -1,6 +1,7 @@
 @import '_colors';
 @import '_fonts';
 @import '_grid';
+@import '_buttons';
 
 #nav{
   background-color: opacify($dkBlue, .8);
@@ -22,4 +23,15 @@
         color: darken($dkBlue, 10%);
       }
   }
+}
+
+//navigation for dashboard menu-------------------------------------------------
+
+#dash-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $mdBlue;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
