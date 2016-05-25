@@ -3,30 +3,46 @@
 @import '_grid';
 
 #deviseWrapperOutside{
-  background-color: lighten($mdBlue,40%);
+  background-color: lighten($mdBlue,10%);
   // margin-left: 20%;
   // margin-right: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 1em;
   border-radius: .5em;
-  box-shadow: 7px 0 7px -7px black,
-  -7px 0 7px -7px black;
+  box-shadow: 30px 0 30px -30px black,
+  -30px 0 30px -30px black;
 
+  #FormTitleArea{
+    // display:flex;
+    // align-items: center;
+    // justify-content: center;
+    margin-top: 0;
+    height: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: darken($mdBlue, 15%);
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: .35em;
+    border-top-right-radius: .35em;
+    box-shadow: 3px 0 3px -3px black,
+    -3px 0 3px -3px black;
+  }
 
-#deviseWrapperInside{
-  background-color: lighten($mdBlue,20%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: .5em;
-  box-shadow: 3px 0 3px -3px black,
-  -3px 0 3px -3px black;
-}
+  #deviseWrapperInside{
+    background-color: darken($mdBlue,10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5em;
+    box-shadow: 7px 0 7px -7px black,
+    -7px 0 7px -7px black;
+  }
 }
 
 #new_user{
-  background-color: lighten($dBlue,20%);
+  background-color: darken($mdBlue,10%);
   padding: 1.5em;
   width: 25em;
   border-radius: .7em;
@@ -43,20 +59,7 @@
 }
 
 
-#FormTitleArea{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-  height: 1.5em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  background-color: transparentize($mdBlue, .35);
-  color: #fff;
-  text-align: center;
-  border-top-left-radius: .35em;
-  border-top-right-radius: .35em;
-}
+
 
 .hero-overlay-bg{
   position: absolute;

@@ -6,43 +6,38 @@
   <div class="col-6" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
   <!-- use this div as an internal wrapper for elements on signup form -->
   <div class="row">
-  <div class="col-1"><p></p></div>
-  <div class="col-10" id="deviseWrapperInside">
-
-    <div class="row">
-      <div class="col-3"><p></p></div>
-      <div class="col-6">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-
-    <div class="field fieldWrapper">
-      <h3 class="form-label"><%= f.label :email %><br /></h3>
-      <div class="form-input"><%= f.email_field :email, autofocus: true %></div>
-    </div>
-
-    <div class="field fieldWrapper">
-      <h3 class='form-label'><%= f.label :password %></h3>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field fieldWrapper">
-      <h3 class='form-label'><%= f.label :password_confirmation %><br /></h3>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="actions fieldWrapper">
-      <div id="signUpBtn"><%= f.submit "Sign up" %></div>
-    </div>
-  <% end %>
-  </div>
-  </div>
-    <div class="col-3"><p></p></div>
-  </div>
-      <div class="col-1"><p></p></div>
+    <div class="col-1"><p></p></div>
+    <div class="col-10" id="deviseWrapperInside">
+      <div class="row">
+        <div class="col-3"><p></p></div>
+        <div class="col-6">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="field fieldWrapper">
+            <h3 class="form-label"><%= f.label :email %><br /></h3>
+            <div class="form-input"><%= f.email_field :email, autofocus: true %></div>
+          </div>
+          <div class="field fieldWrapper">
+            <h3 class='form-label'><%= f.label :password %></h3>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+          <div class="field fieldWrapper">
+            <h3 class='form-label'><%= f.label :password_confirmation %><br /></h3>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+          <div class="actions fieldWrapper">
+            <div id="signUpBtn"><%= f.submit "Sign up" %></div>
+          </div>
+              <% end %>
+        </div>
+        <div class="col-3"><p></p></div>
       </div>
+    </div>
+    <div class="col-1"><p></p></div>
+  </div>
   </div>
   <div class="col-3"><p></p></div>
 </div>
