@@ -1,11 +1,33 @@
+<h2><strong>My Projects</strong></h2>
+<table>
+
 <% @projects.each do |project| %>
+
 <p>
   <tr>
-    <td><%= project.name %></td>
+    <td><strong><%= project.name %></strong></td>
+  </tr>
     <br>
+  <tr>
     <td><%= project.summary %></td>
+  </tr>
     <br>
+  <tr>
     <td><%= project.location %></td>
   </tr>
+  <br>
+  <tr>
+    <td><%= link_to 'Edit Project', edit_project_path(project) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
 </p>
 <% end %>
+
+</table>
+
+<button><%= link_to 'Add a Project', new_project_path %></button>
+<button><%= link_to 'Dashboard', dashboard_path %></button>
+
