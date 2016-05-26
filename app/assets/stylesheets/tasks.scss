@@ -7,6 +7,45 @@
 
 .strike {
   text-decoration: line-through;
-  color: green;
+  color: #24CB6A;
+  font-weight: bold;
 }
+
+#task-header{
+  text-align: center;
+}
+
+.tasks-me-page {
+  color: black;
+}
+
+#bottom-buttons{
+  margin: auto;
+}
+
+.buttons {
+  background-color: #d7c834;
+  color: black;
+}
+
+.task-list {
+  text-align: center;
+  list-style-type: none;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 0px;
+}
+
+.after-task {
+  width: 300px;
+}
+
+hr {
+  width: 500px;
+}
+
 
