@@ -1,26 +1,12 @@
-<!-- dashboard nav menu -->
-
-<div class="row" id="dash-nav">
-  <button class="dash-btn" id="create-proj">
-    <%= link_to "Create a New Project", new_project_path %>
-  </button>
-  <button class="dash-btn" id="manage-proj">
-    <%= link_to "Manage My Projects", projects_me_path %>
-  </button>
-  <button class="dash-btn" id="my-tasks">
-    <%= link_to "My Tasks", tasks_me_path %>
-  </button>
-  <button class="dash-btn" id="browse-proj">
-    <%= link_to "Browse Current Projects", projects_path %>
-  </button>
-</div>
-
-<!-- end dashboard nav menu -->
 
 <!-- current projects sampling -->
-
+<div class="row">
 <% @projects.sample(4).each do |p| %>
-<h3><%= p.name %></h3>
-<p><%= p.summary %></p>
-<p><%= p.location %></p>
+
+  <div class="col-md-6 col-md-offset-3 panel panel-default">
+    <div class="panel-heading">Project Name: <%= p.name %></div>
+    <div class="panel-body">Summary: <br><%= p.summary %></div>
+    <div class="panel-footer">Location: <%= p.location %></div>
+  </div>
 <% end %>
+</div>
