@@ -49,19 +49,20 @@
 
       <div class="tasks-in-progress">
         <h3>Claimed Tasks</h3>
+          <div class="claimed-tasks-list">
+            <% @claimed.each do |task| %>
+              <ul>
 
-          <% @claimed.each do |task| %>
-            <ul>
+                <li><%= task.name %></li>
 
-              <li><%= task.name %></li>
+                <% if current_user.id == @project.owner_id %>
 
-              <% if current_user.id == @project.owner_id %>
+                  <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+                <% end %>
+              </ul>
 
-                <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
-              <% end %>
-            </ul>
-
-          <% end %>
+            <% end %>
+          </div>
       </div>
 
 

@@ -46,8 +46,13 @@ $(document).ready(function(){
     })
   })
 
-});
+  $('.claim').click(function(){
+    var thisDiv = $(this).parent();
+    thisDiv.hide();
+    $('.claimed-tasks-list').prepend(thisDiv);
+  })
 
+});
 
 
 function editTask(data){
