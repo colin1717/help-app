@@ -32,15 +32,12 @@
   }
 
   .buttons {
-    background-color: white;
     margin-bottom: 20px;
-
-      &:hover{
-        background-color: transparentize(gray, 0.5);
-    }
+    background-color: #13CBB8;
+    width: 125px;
 
     a {
-      color: black;
+      color: white;
     }
   }
 
