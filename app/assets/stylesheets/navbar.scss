@@ -1,0 +1,56 @@
+@import '_colors';
+
+/* navbar */
+.navbar-inverse {
+    background-color: $dkBlue;
+    border-color: #E7E7E7;
+}
+/* title */
+.navbar-inverse .navbar-brand {
+    color: #777;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: $grey;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: $grey ;
+    background-color:lighten($dkBlue, 9%);
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: $grey;
+    background-color: lighten($dkBlue, 9%);
+}
+
+/* mobile version */
+.navbar-inverse .navbar-toggle {
+    border-color: $grey;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: $mdBlue;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: $grey;
+}
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: $grey;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: $mdBlue;
+    }
+}
