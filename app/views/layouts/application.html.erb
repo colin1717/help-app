@@ -12,17 +12,24 @@
 <div class="grid-container">
 
 <!-- nav div -->
-  <nav class = "nav navbar-inverse">
+  <nav class = "nav navbar-inverse" role = "navigation">
     <div class="container-fluid">
-    <% if !current_user %>
-      <!-- note that styles are coming from the self.scaffolds stylesheed -->
-      <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-        <% else %>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-        <% end %>
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "New Project", new_project_path %></li>
+        <li><%= link_to "My Projects", projects_me_path %></li>
+        <li><%= link_to "My Tasks", tasks_me_path %></li>
+        <li><%= link_to "Browse", projects_path %></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+      <!-- note that styles are coming from the self.scaffolds stylesheed -->
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+          <% else %>
+
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <% end %>
+        </ul>
       </div>
     </nav>
 
