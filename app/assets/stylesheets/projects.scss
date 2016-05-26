@@ -90,14 +90,17 @@ button a {
   }
 }
 
-.my-projects {
+.projects {
   text-align: center;
+  color: white;
+  background-color: #55649d;
 
   #project-header{
   }
 
-  #button1 {
+  .buttons {
     margin: auto;
+    margin-bottom: 20px;
   }
 
   .project-list {
@@ -126,6 +129,11 @@ button a {
     &:hover {
       background-color: transparentize(gray, 0.5);
     }
+  }
+
+  .project-list {
+    background-color: white;
+    color: black;
   }
 
 }

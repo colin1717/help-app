@@ -1,8 +1,11 @@
+<body class="projects">
+
+
 <!-- the notice <p> is not inititially visible -->
 <div><p id="notice"><%= notice %></p></div>
 
 <!-- page title header... need to make dynamic or turn this into a header above the nav element -->
-<div><h1>Help</h1></div>
+<div><h1>Browse Projects</h1></div>
 
 <!-- checks to see if the user on the site is a current user -->
 <!-- wrapper div for login sign up section -->
@@ -17,37 +20,32 @@
     <br>
     <h2>Existing Users!</h2>
     <button> <%= link_to "Log In", new_user_session_path %> </button>
+  </div>
 
   <% else %>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Summary</th>
-        <th>Location</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @projects.each do |project| %>
-        <tr>
-          <td><%= project.name %></td>
-          <td><%= project.summary %></td>
-          <td><%= project.location %></td>
-          <td><%= project.owner_id %></td>
-          <td><%= link_to 'Show', project %></td>
-          <td><%= link_to 'Edit', edit_project_path(project) %></td>
-          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<!-- closing div for login/sign up container -->
-</div>
-  <br>
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-  <%= link_to 'New Project', new_project_path %>
+ <% @projects.each do |project| %>
+<div class="all-projects">
+  <ul class="project-list">
+    <li><strong>Project</strong></li>
+    <li><%= link_to project.name, project_path(project) %></li>
+    <li><strong>Summary</strong></li>
+    <li><%= project.summary %></li>
+    <li><strong>Location</strong></li>
+    <li><%= project.location %></li>
+  </ul>
 
   <% end %>
+</div>
+
+<!-- closing div for login/sign up container -->
+
+  <br>
+  <div>
+    <h3>Want to start a new project?</h3>
+    <button type="button" class="btn btn-default btn-sml buttons"><%= link_to 'Create a Project!', new_project_path %></button>
+  </div>
+
+  <% end %>
+
+</body>
