@@ -1,5 +1,7 @@
-$(document).ready(function(){
 
+
+var ready = function(){
+  console.log('ready');
 
   $(".edit-task").click(function(){
     var taskId = $(this).data().id;
@@ -48,11 +50,12 @@ $(document).ready(function(){
 
   $('.claim').click(function(){
     var thisDiv = $(this).parent();
-    $('.claimed-tasks-list').prepend(thisDiv);
     thisDiv.hide();
+    $('.claimed-tasks-list').prepend(thisDiv);
+    thisDiv.show();
   })
 
-});
+};
 
 
 function editTask(data){
@@ -83,3 +86,5 @@ function populateNew(){
     "<ul><li>" + newName + '</li><div class="button-row"><button class="claim" data-id="12">Claim Task</button><br><button class="edit-task" data-id="12">Edit Task</button></div>'
     );
 }
+
+$(document).on('page:load ready', ready);
