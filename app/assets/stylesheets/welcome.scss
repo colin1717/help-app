@@ -50,6 +50,9 @@ body {
   }
 }
 
+
+// containers with images at bottom of welcome page
+
 .boxes {
   height: 300px;
   width: auto;
@@ -74,9 +77,9 @@ body {
   margin: 0 7px 0 7px;
   height: 260px;
   width: 23%;
-  background-color: pink;
+  background-color: $yellow;
   border: 2px solid black;
-  //border-radius: 5px;
+  border-radius: 5px;
   opacity: .7;
 
     &:hover {
@@ -93,10 +96,8 @@ body {
 .project-description {
   height: 70px;
   background-color: $yellow;
-  padding-top: 8px;
+  padding: 4px;
   color: $dkBlue;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 #box1 .project-pic {
