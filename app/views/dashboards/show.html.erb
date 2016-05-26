@@ -19,8 +19,8 @@
 
 <!-- current projects sampling -->
 
-<% @projects.each do |p| %>
-<h2><%= p.name %></h2>
-<h3><%= p.summary %></h3>
-<h3><%= p.location %></h3>
+<% @projects.sample(4).each do |p| %>
+<h3><%= p.name %></h3>
+<p><%= p.summary %></p>
+<p><%= p.location %></p>
 <% end %>
