@@ -75,6 +75,6 @@ function submitNew(){
 function populateNew(){
   var newName = $('#task_name').val();
   $('.available-tasks-list').prepend(
-    "<ul><li>" + newName + '</li><div class="row"><button class="claim" data-id="12">Claim Task</button><br><button class="edit-task" data-id="12">Edit Task</button></div>'
+    "<ul><li>" + newName + '</li><div class="button-row"><button class="claim" data-id="12">Claim Task</button><br><button class="edit-task" data-id="12">Edit Task</button></div>'
     );
 }
