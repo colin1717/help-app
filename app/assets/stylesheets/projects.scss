@@ -88,3 +88,45 @@ button a {
     margin: 0 5px 0 0px;
   }
 }
+
+.my-projects {
+  text-align: center;
+
+  #project-header{
+  }
+
+  #button1 {
+    margin: auto;
+  }
+
+  .project-list {
+    text-align: center;
+    list-style-type: none;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+
+  .after-projects {
+    width: 300px;
+  }
+  .my-projects-hr {
+    width: 500px;
+  }
+
+  li a {
+  text-decoration: none;
+  color: black;
+
+    &:hover {
+      background-color: transparentize(gray, 0.5);
+    }
+  }
+
+}
+
+

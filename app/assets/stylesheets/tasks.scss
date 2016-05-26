@@ -11,41 +11,69 @@
   font-weight: bold;
 }
 
-#task-header{
-  text-align: center;
-}
-
 .tasks-me-page {
-  color: black;
-}
-
-#bottom-buttons{
-  margin: auto;
-}
-
-.buttons {
-  background-color: #d7c834;
-  color: black;
-}
-
-.task-list {
   text-align: center;
-  list-style-type: none;
-  width: 300px;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding-left: 0px;
+  color: black;
+
+  #task-header{
+    text-align: center;
+  }
+
+  #bottom-buttons{
+    margin: auto;
+  }
+
+  .buttons {
+    background-color: #55649D;
+    margin-bottom: 20px;
+
+      &:hover{
+        background-color: transparentize(white, 0.5);
+        a {
+          color: black;
+        }
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  .task-list {
+    text-align: center;
+    list-style-type: none;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+
+  .after-task {
+    width: 300px;
+  }
+
+  hr {
+    width: 500px;
+  }
+
+  li .complete {
+    margin-bottom: 10px;
+
+    &:hover {
+      color: white;
+      background-color: #24CB6A;
+
+    }
+  }
 }
 
-.after-task {
-  width: 300px;
-}
 
-hr {
-  width: 500px;
-}
+
+
+
+
 
 
