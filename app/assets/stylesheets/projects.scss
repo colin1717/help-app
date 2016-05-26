@@ -45,6 +45,13 @@
   }
 }
 
+button a {
+  color: black;
+  &:visited {
+    color: black;
+  }
+}
+
 #add-task {
   float: right;
   margin-top: 5px;

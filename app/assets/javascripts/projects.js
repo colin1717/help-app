@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  console.log('doc ready');
 
 
 $(".edit-task").click(function(){
@@ -17,6 +18,11 @@ $(".edit-task").click(function(){
       $('#edit-form').html(data);
       $('.project-and-tasks').hide();
       $('#edit-form').show();
+
+      $('#submit input').click(function(){
+        console.log("submit button");
+        submitEdit();
+      })
     })
     .fail(function(error, textStatus){
       console.log(error);
@@ -24,3 +30,9 @@ $(".edit-task").click(function(){
   });
 
 });
+
+
+function submitEdit(){
+  $("#edit-form").hide();
+  $('.project-and-tasks').show();
+}
