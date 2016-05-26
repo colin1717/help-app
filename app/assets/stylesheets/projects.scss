@@ -110,6 +110,13 @@ button a {
   .buttons {
     margin: auto;
     margin-bottom: 20px;
+    background-color: #13CBB8;
+    width: 125px;
+
+    a {
+      color: white;
+      text-align: center;
+    }
   }
 
   .project-list {
@@ -122,6 +129,27 @@ button a {
     margin-bottom: 20px;
     margin-top: 20px;
     padding-left: 0px;
+  }
+
+  .edit {
+    background-color: #13CBB8;
+    margin-top: 5px;
+    width: 125px;
+    a {
+      color: white;
+    }
+  }
+  .delete {
+    margin-top: 5px;
+    background-color: #CB4D39;
+    width: 125px;
+    a {
+      color: white;
+    }
+  }
+
+  #lastbutton {
+    margin-bottom: 5px;
   }
 
   .after-projects {
@@ -165,5 +193,11 @@ button a {
   li {
     margin-top: 15px;
   }
+}
+
+#edit-delete-button-list {
+  list-style-type: none;
+  display: inline;
+  padding-left: 0px;
 }
 

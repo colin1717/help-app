@@ -7,18 +7,23 @@
 
   <div class="project-div">
     <ul class="project-list">
-      <li><strong><%= project.name %></strong></li>
+      <li><strong>Project Name</strong></li>
+      <li><%= project.name %></li>
+      <li><strong>Summary</strong></li>
       <li><%= project.summary %></li>
+      <li><strong>Location</strong></li>
       <li><%= project.location %></li>
-      <li><%= link_to 'Edit Project', project_path(project) %></li>
-      <li><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <ul id="edit-delete-button-list">
+      <li><button type="button" class="btn btn-default btn-sml edit"><%= link_to 'Edit Project', edit_project_path(project) %></button></li>
+      <li id="lastbutton"><button type="button" class="btn btn-default btn-sml delete"><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
+      </ul>
     </ul>
   </div>
   <hr class='after-projects'>
 
   <% end %>
 
-  <button id='button1'><%= link_to 'Add a Project', new_project_path %></button>
-  <button><%= link_to 'Dashboard', dashboard_path %></button>
+  <button type="button" class="btn btn-default btn-sml buttons"><%= link_to 'Add a Project', new_project_path %></button>
+  <button type="button" class="btn btn-default btn-sml buttons"><%= link_to 'Dashboard', dashboard_path %></button>
 
 </body>
