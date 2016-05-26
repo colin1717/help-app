@@ -27,6 +27,7 @@
 
  <% @projects.each do |project| %>
 <div class="all-projects">
+
   <ul class="project-list">
     <li><strong>Project</strong></li>
     <li><%= link_to project.name, project_path(project) %></li>
@@ -45,7 +46,8 @@
   <div>
     <h3>Want to start a new project?</h3>
 
-    <button type="button" class="btn btn-default btn-sml buttons"><%= link_to 'Create a Project!', new_project_path %></button>
+<%= link_to '<button type="button" class="btn btn-default btn-sml buttons">Create a Project</button>'.html_safe, new_project_path %>
+
   </div>
 
   <% end %>
