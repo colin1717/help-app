@@ -4,19 +4,14 @@
 <hr>
 <% @tasks.each do |task| %>
 
-<p>
-  <tr>
-
-    <td><strong><%= task.project.name %></strong></td>
-
-  </tr>
-  <tr>
-    <td><p class="task-name <%=task.state == 'completed' ? 'strike' : ""  %>" id='<%= task.id %>'><%= task.name %></p></td>
-  </tr>
-  <tr>
-    <td><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project_id %>' >Completed!</button></td>
-  </tr>
-</p>
+<div class="task-div">
+  <ul class="task-list">
+    <li><strong><%= task.project.name %></strong></li>
+    <li>  <p class="task-name <%=task.state == 'completed' ? 'strike' : ""  %>" id='<%= task.id %>'><%= task.name %></p></li>
+    <li><button class='complete' data-id='<%= task.id %>' data-projectid='<%= task.project_id %>' >Completed!</button></li>
+  </ul>
+</div>
+<hr class='after-task'>
 
 <% end %>
 
