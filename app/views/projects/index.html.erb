@@ -6,6 +6,7 @@
 
 <!-- page title header... need to make dynamic or turn this into a header above the nav element -->
 <div><h1>Browse Projects</h1></div>
+<hr id='headerhr'>
 
 <!-- checks to see if the user on the site is a current user -->
 <!-- wrapper div for login sign up section -->
@@ -34,7 +35,7 @@
     <li><strong>Location</strong></li>
     <li><%= project.location %></li>
   </ul>
-
+  <hr>
   <% end %>
 </div>
 
@@ -43,6 +44,7 @@
   <br>
   <div>
     <h3>Want to start a new project?</h3>
+
     <button type="button" class="btn btn-default btn-sml buttons"><%= link_to 'Create a Project!', new_project_path %></button>
   </div>
 
