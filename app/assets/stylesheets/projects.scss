@@ -10,7 +10,6 @@
 .project-page {
   background-color: $mdBlue;
   text-align: center;
-  color: black;
   font-family: $base-font-family;
 
   ul {
@@ -28,10 +27,22 @@
     list-style-type: none;
     padding: 5px 40px 0 0;
   }
+
+  a {
+    color: black;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+  }
 }
 
 .project-info {
-  color: black;
+  color: white;
   background-color: $mdBlue;
   width: 400px;
   margin: auto;
