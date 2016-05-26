@@ -13,12 +13,12 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    @task = @project.task.name
   end
 
   # GET /tasks/new
   def new
     @task = @project.tasks.build
+    render :layout => nil
   end
 
   # GET /tasks/1/edit

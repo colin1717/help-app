@@ -1,4 +1,4 @@
-<%= form_for([@project, @task]) do |f| %>
+<%= form_for([@project, @task], remote: true) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -28,7 +28,7 @@
     <%= f.label :date_needed %><br>
     <%= f.datetime_select :date_needed , :ampm => true, :minute_step => 15%>
   </div>
-  <div class="actions">
+  <div class="actions" id="submit">
     <%= f.submit %>
   </div>
 <% end %>
