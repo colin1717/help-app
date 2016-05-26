@@ -14,28 +14,33 @@
 .tasks-me-page {
   text-align: center;
   color: black;
+  background-color: #55649d;
 
   #task-header{
     text-align: center;
+    color: white;
   }
 
   #bottom-buttons{
     margin: auto;
   }
 
+
+  .complete{
+    background-color: #24CB6A;
+    color: white;
+  }
+
   .buttons {
-    background-color: #55649D;
+    background-color: white;
     margin-bottom: 20px;
 
       &:hover{
-        background-color: transparentize(white, 0.5);
-        a {
-          color: black;
-        }
+        background-color: transparentize(gray, 0.5);
     }
 
     a {
-      color: white;
+      color: black;
     }
   }
 
@@ -49,6 +54,7 @@
     margin-bottom: 20px;
     margin-top: 20px;
     padding-left: 0px;
+    background-color: white;
   }
 
   .after-task {

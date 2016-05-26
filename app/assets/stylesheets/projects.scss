@@ -92,7 +92,8 @@ button a {
   color: white;
   background-color: #55649d;
 
-  #project-header{
+  #headerhr {
+    width: 500px;
   }
 
   .buttons {
@@ -131,6 +132,15 @@ button a {
   .project-list {
     background-color: white;
     color: black;
+  }
+
+  hr{
+    width: 350px;
+  }
+
+  h3{
+    margin-top: 0px;
+    margin-bottom: 5px;
   }
 
 }
