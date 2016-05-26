@@ -24,20 +24,19 @@
       <div class="available-tasks">
         <h3>Available Tasks</h3>
 
-        <% if @project.tasks.length > 0 %>
-          <% @project.tasks.each do |task| %>
-        <ul id='task<%= task.id %>'>
-          <li><%= task.name %></li>
-          <li><%= task.time_commitment %> hours</li>
-            <% if current_user.id == @project.owner_id %>
-            <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
-            <% end %>
-        </ul>
+          <% @open.each do |task| %>
+            <ul>
+              <li><%= task.name %></li>
+              <button class="claim" data-id="<%= task.id %>">Claim Task</button>
+              <% if current_user.id == @project.owner_id %>
+
+                <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+              <% end %>
+            </ul>
           <% end %>
-        <% end %>
 
         <% if current_user.id == @project.owner_id %>
-          <button id='add-task'>Add Task</button>
+          <button><%= link_to 'Add Task', new_project_task_path(@project)%></button>
 
         <% end %>
 
@@ -50,13 +49,33 @@
       <div class="tasks-in-progress">
         <h3>Claimed Tasks</h3>
 
-        <% if @project.tasks.length > 0 %>
-          <% @project.tasks.each do |task| %>
+          <% @claimed.each do |task| %>
             <ul>
+
               <li><%= task.name %></li>
+
+              <% if current_user.id == @project.owner_id %>
+
+                <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+              <% end %>
+            </ul>
+
+          <% end %>
+      </div>
+
+
+      <hr>
+
+      <div class="completed-tasks">
+        <h3>Completed Tasks</h3>
+
+          <% @completed.each do |task| %>
+            <ul>
+              <% if task.state == 'completed'%>
+              <li><%= task.name %></li>
+              <% end %>
             </ul>
           <% end %>
-        <% end %>
       </div>
 
       <div class="space"></div>
