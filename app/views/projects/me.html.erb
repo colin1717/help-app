@@ -1,31 +1,24 @@
-<h2><strong>My Projects</strong></h2>
-<table>
-<% @projects.each do |project| %>
-<p>
-  <tr>
-    <td><strong><%= project.name %></strong></td>
-  </tr>
-    <br>
-  <tr>
-    <td><%= project.summary %></td>
-  </tr>
-    <br>
-  <tr>
-    <td><%= project.location %></td>
-  </tr>
-  <br>
-  <tr>
-    <td><%= link_to 'Edit Project', edit_project_path(project) %></td>
-  </tr>
-  <tr>
-    <td><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<body class="my-projects">
+  <h2 id='project-header'><strong>My Projects</strong></h2>
 
-</p>
-<% end %>
+  <hr class='my-projects-hr'>
 
-</table>
+  <% @projects.each do |project| %>
 
-<button><%= link_to 'Add a Project', new_project_path %></button>
-<button><%= link_to 'Dashboard', dashboard_path %></button>
+  <div class="project-div">
+    <ul class="project-list">
+      <li><strong><%= project.name %></strong></li>
+      <li><%= project.summary %></li>
+      <li><%= project.location %></li>
+      <li><%= link_to 'Edit Project', edit_project_path(project) %></li>
+      <li><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+  </div>
+  <hr class='after-projects'>
 
+  <% end %>
+
+  <button id='button1'><%= link_to 'Add a Project', new_project_path %></button>
+  <button><%= link_to 'Dashboard', dashboard_path %></button>
+
+</body>
