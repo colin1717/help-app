@@ -49,7 +49,6 @@
       <div class="tasks-in-progress">
         <h3>Claimed Tasks</h3>
 
-        <% @claimed %>
           <% @claimed.each do |task| %>
             <ul>
 
@@ -70,7 +69,6 @@
       <div class="completed-tasks">
         <h3>Completed Tasks</h3>
 
-        <% @completed %>
           <% @completed.each do |task| %>
             <ul>
               <% if task.state == 'completed'%>
