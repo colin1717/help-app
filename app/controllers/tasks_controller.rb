@@ -18,6 +18,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = @project.tasks.build
+    render :layout => nil
   end
 
   # GET /tasks/1/edit

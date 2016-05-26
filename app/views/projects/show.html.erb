@@ -24,19 +24,20 @@
       <div class="available-tasks">
         <h3>Available Tasks</h3>
 
-          <% @open.each do |task| %>
-            <ul>
-              <li><%= task.name %></li>
-              <button class="claim" data-id="<%= task.id %>">Claim Task</button>
-              <% if current_user.id == @project.owner_id %>
+          <div class="available-tasks-list">
+            <% @open.each do |task| %>
+              <ul>
+                <li><%= task.name %></li>
+                <button class="claim" data-id="<%= task.id %>">Claim Task</button>
+                <% if current_user.id == @project.owner_id %>
 
-                <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
-              <% end %>
-            </ul>
-          <% end %>
-
+                  <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
         <% if current_user.id == @project.owner_id %>
-          <button><%= link_to 'Add Task', new_project_task_path(@project)%></button>
+          <button class='new-task-button'>Add Task</button>
 
         <% end %>
 
@@ -84,6 +85,4 @@
   <div id="new-task" class='hidden'></div>
   <div id="edit-form" class='hidden'></div>
 
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-  <%= link_to 'Back', projects_path %>
 </div>
