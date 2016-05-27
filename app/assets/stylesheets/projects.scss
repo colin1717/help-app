@@ -198,6 +198,19 @@ button a {
 .new-project {
   text-align: center;
   background-color: $mdBlue;
+  color: white;
+
+  hr {
+    width: 500px;
+  }
+
+  input {
+    color: black;
+  }
+
+  .hr-small{
+    width: 350px;
+  }
 }
 
 .completed-tasks {
