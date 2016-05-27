@@ -23,6 +23,14 @@
 
   }
 
+  .top-hr {
+    width: 500px;
+  }
+
+  hr {
+    width: 350px;
+  }
+
   li {
     list-style-type: none;
     padding: 5px 40px 0 0;
@@ -44,7 +52,7 @@
 .project-info {
   color: white;
   background-color: $mdBlue;
-  width: 400px;
+  width: 500px;
   margin: auto;
   padding-top: 10px;
 
