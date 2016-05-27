@@ -35,11 +35,12 @@
     margin: 10px 10px 60px 10px;
     background-color: #13CBB8;
     width: 125px;
-    vertical-align: middle;
     border-radius: 3px;
+    vertical-align: 0px;
 
     &:hover {
       color: white;
+      vertical-align: middle;
     }
 
     a {
