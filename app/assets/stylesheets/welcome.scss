@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  text-align: center;
 }
 
 .row{
@@ -35,18 +36,13 @@ body {
 }
 
 .get-started {
-  border-radius: 5px;
-  text-align: center;
-  width: 100px;
-  height: 30px;
-  margin: auto;
-  margin-top: 11%;
-  padding-top: 10px;
-  border: 2px solid white;
-  color: white;
+  margin-top: 85px;
+  background-color: $green;
+  border-color: #ccc;
+  vertical-align: bottom;
 
- &:hover {
-  background-color: transparentize(white, 0.6);
+  &:hover{
+    color: $green;
   }
 }
 

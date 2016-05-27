@@ -32,9 +32,15 @@
   }
 
   .buttons {
-    margin-bottom: 20px;
+    margin: 10px 10px 60px 10px;
     background-color: #13CBB8;
     width: 125px;
+    vertical-align: middle;
+    border-radius: 3px;
+
+    &:hover {
+      color: white;
+    }
 
     a {
       color: white;
