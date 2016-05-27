@@ -9,7 +9,7 @@
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 1em;
-  border-radius: .5em;
+  border-radius: .35em;
   box-shadow: 30px 0 30px -30px black,
   -30px 0 30px -30px black;
 
@@ -20,12 +20,12 @@
     margin-top: 0;
     height: 1.5em;
     padding-top: .5em;
-    padding-bottom: .5em;
+    padding-bottom: 1.5em;
     background-color: darken($mdBlue, 15%);
     color: #fff;
     text-align: center;
-    border-top-left-radius: .35em;
-    border-top-right-radius: .35em;
+    //border-top-left-radius: .35em;
+    //border-top-right-radius: .35em;
     box-shadow: 3px 0 3px -3px black,
     -3px 0 3px -3px black;
   }
