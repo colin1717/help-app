@@ -5,8 +5,9 @@
       <div class="project-info">
 
         <div class="name">
-          <h3>Project</h3>
-          <div id="project-name"><h5><%= @project.name %></h5></div>
+          <h2><strong>Projects</strong></h2>
+          <hr class="top-hr">
+          <div id="project-name"><h2><%= @project.name %></h2></div>
         </div>
 
         <div class="summary">
@@ -29,7 +30,7 @@
           <div class="available-tasks-list">
             <% @open.each do |task| %>
               <ul>
-                <li><%= task.name %></li>
+                <li><strong><%= task.name %></strong></li>
                 <button class="claim" data-id="<%= task.id %>">Claim Task</button>
                 <% if current_user.id == @project.owner_id %>
 
@@ -55,7 +56,7 @@
             <% @claimed.each do |task| %>
               <ul>
 
-                <li><%= task.name %></li>
+                <li><strong><%= task.name %></strong></li>
 
                 <% if current_user.id == @project.owner_id %>
 
@@ -76,7 +77,7 @@
           <% @completed.each do |task| %>
             <ul>
               <% if task.state == 'completed'%>
-              <li><%= task.name %></li>
+              <li><strong><%= task.name %></strong></li>
               <% end %>
             </ul>
           <% end %>
