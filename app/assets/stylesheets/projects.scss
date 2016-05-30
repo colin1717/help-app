@@ -146,16 +146,31 @@ button a {
     background-color: #13CBB8;
     margin-top: 5px;
     width: 125px;
-    a {
+    border-radius: 3px;
+
+    &:hover {
       color: white;
     }
+    a {
+      color: white;
+      text-align: center;
+    }
   }
+
   .delete {
     margin-top: 5px;
     background-color: #CB4D39;
     width: 125px;
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: white;
+    }
     a {
       color: white;
+      text-align: center;
     }
   }
 

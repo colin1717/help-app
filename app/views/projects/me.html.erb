@@ -14,8 +14,9 @@
       <li><strong>Location</strong></li>
       <li><%= project.location %></li>
       <ul id="edit-delete-button-list">
-      <li><button type="button" class="btn btn-default btn-sml edit"><%= link_to 'Edit Project', edit_project_path(project) %></button></li>
-      <li id="lastbutton"><button type="button" class="btn btn-default btn-sml delete"><%= link_to 'Delete Project', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
+      <%= link_to '<button type="button" class="btn btn-default btn-sml edit">Edit Project</button>'.html_safe, edit_project_path(project) %>
+      <br>
+      <%= link_to '<button type="button" class="btn btn-default btn-sml delete">Delete Project</button>'.html_safe, project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %>
       </ul>
     </ul>
   </div>
