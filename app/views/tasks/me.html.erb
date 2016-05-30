@@ -8,7 +8,7 @@
   <ul class="task-list">
     <li><strong><%= task.project.name %></strong></li>
     <li>  <p class="task-name <%=task.state == 'completed' ? 'strike' : ""  %>" id='<%= task.id %>'><%= task.name %></p></li>
-    <li><button  type="button" class="btn btn-default btn-sml complete" data-id='<%= task.id %>' data-projectid='<%= task.project_id %>' >Completed!</button></li>
+    <li><button  type="button" class="btn btn-default btn-sml complete" data-id='<%= task.id %>' data-projectid='<%= task.project_id %>' >Mark as Complete!</button></li>
   </ul>
 </div>
 <hr class='after-task'>
