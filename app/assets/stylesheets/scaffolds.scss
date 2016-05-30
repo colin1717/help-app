@@ -15,6 +15,8 @@
 
 .panel-default{
   margin-top: 50px;
+  box-shadow: 5px 5px 3px darken($grey, 70%);
+
 }
 
 .panel-default > .panel-heading{
