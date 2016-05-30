@@ -4,7 +4,7 @@
 <% @projects.sample(4).each do |p| %>
 
   <div class="col-md-3 panel panel-default cust-panel">
-    <div class="panel-heading text-center" id="p-head"><h3><%= p.name %></h3></div>
+    <div class="panel-heading text-center" id="p-head"><h3><%= link_to p.name, project_path(p) %></h3></div>
     <div class="panel-body" id="p-body"><h5><strong>Project Summary:</strong></h5><br><%= p.summary %></div>
     <div class="panel-footer" id="p-foot"><h5><strong>Project Location:</strong></h5><br><%= p.location %></div>
   </div>
