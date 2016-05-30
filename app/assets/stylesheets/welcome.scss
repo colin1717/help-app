@@ -62,10 +62,10 @@ body {
   padding-top: 20px;
   width: 100%;
   margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: nowrap;
+  // justify-content: center;
 }
 
 .box {
@@ -92,7 +92,7 @@ body {
 .project-description {
   height: 70px;
   background-color: $yellow;
-  padding: 4px;
+  // padding: 4px;
   color: $dkBlue;
 }
 

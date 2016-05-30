@@ -1,12 +1,12 @@
 
-<!-- current projects sampling -->
-<div class="row">
+<!-- container adds margins to each side -->
+<div class="container no-gutter">
 <% @projects.sample(4).each do |p| %>
 
-  <div class="col-md-6 col-md-offset-3 panel panel-default">
-    <div class="panel-heading">Project Name: <%= p.name %></div>
-    <div class="panel-body">Summary: <br><%= p.summary %></div>
-    <div class="panel-footer">Location: <%= p.location %></div>
+  <div class="col-md-3 panel panel-default cust-panel">
+    <div class="panel-heading text-center" id="p-head"><h3><%= p.name %></h3></div>
+    <div class="panel-body" id="p-body"><h5><strong>Project Summary:</strong></h5><br><%= p.summary %></div>
+    <div class="panel-footer" id="p-foot"><h5><strong>Project Location:</strong></h5><br><%= p.location %></div>
   </div>
 <% end %>
 </div>
