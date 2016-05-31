@@ -260,6 +260,26 @@ textarea {
   }
 }
 
+.new-task-button {
+  background-color: #13CBB8;
+  width: 125px;
+  border-radius: 3px;
+
+  &:hover {
+    color: white;
+  }
+  a {
+    color: white;
+    text-align: center;
+    }
+}
+
+
+#project-name {
+  text-decoration: underline;
+}
+
+
 .field_with_errors {
   margin:0 auto;
 
