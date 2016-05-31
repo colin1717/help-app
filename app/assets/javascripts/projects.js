@@ -49,7 +49,8 @@ var ready = function(){
   })
 
   $('.claim').click(function(){
-    var thisDiv = $(this).parent();
+    var thisDiv = $(this).parent().parent();
+    console.log(thisDiv);
     thisDiv.hide();
     $('.claimed-tasks-list').prepend(thisDiv);
     thisDiv.show();
