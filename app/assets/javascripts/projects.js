@@ -42,11 +42,16 @@ function populateNew(data){
 }
 
 function taskEventSet(){
+  listenForAjaxSuccess()
   newEventSet()
   claimEventSet()
   editEventSet()
 }
-
+function listenForAjaxSuccess(){
+  $(document).on('ajax:success', '#new_task' ,  function(e, data, status, xhr){
+    console.log(data)
+    });
+}
 function claimEventSet(){
   $('.claim').click(function(){
    var taskId = $(this).data().id
@@ -77,11 +82,7 @@ function claimEventSet(){
 
 function newEventSet(){
   $('.new-task-button').click(function(){
-
     var projectId = window.location.pathname.split('/').pop();
-    $(document).on('ajax:success', function(e, data, status, xhr){
-      console.log(data)
-      });
     $.ajax({
       url: '/projects/' + projectId + '/tasks/new',
       method: 'GET',
@@ -103,6 +104,7 @@ function newEventSet(){
 function editEventSet(){
   $(".edit-task").click(function(){
     var taskId = $(this).data().id;
+    var taskDiv = $(this).parent().parent()
     var projectId = window.location.pathname.split('/').pop();
 
     $.ajax({
@@ -112,7 +114,7 @@ function editEventSet(){
     })
     .done(function(data, textStatus){
       editTask(data);
-
+      taskDiv.hide()
       $('#submit input').click(function(){
         submitEdit();
       })
