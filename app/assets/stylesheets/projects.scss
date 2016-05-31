@@ -267,13 +267,13 @@ textarea {
 
   &:hover {
     color: white;
+    background-color: #13CBB8;
   }
   a {
     color: white;
     text-align: center;
     }
 }
-
 
 #project-name {
   text-decoration: underline;
@@ -289,5 +289,42 @@ textarea {
   color:black;
 }
 .claim {
-  margin-right: 38px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  background-color: #13CBB8;
+  width: 100px;
+  border-radius: 3px;
+  height: 32px;
+
+  &:hover {
+    color: white;
+    background-color: #13CBB8;
+  }
+  a {
+    color: white;
+    text-align: center;
+  }
+}
+
+.edit-task {
+  margin-right: 30px;
+  margin-bottom: 4px;
+  background-color: #13CBB8;
+  width: 100px;
+  border-radius: 3px;
+  height: 32px;
+
+  &:hover {
+    color: white;
+    background-color: #13CBB8;
+  }
+  a {
+    color: white;
+    text-align: center;
+  }
+}
+
+.claim-edit-buttons {
+  display: flex;
+  justify-content: space-around;
 }

@@ -31,16 +31,18 @@
             <% @open.each do |task| %>
               <ul>
                 <li><strong><%= task.name %></strong></li>
-                <button class="claim" data-id="<%= task.id %>">Claim Task</button>
+                <div class="claim-edit-buttons">
+                <button class="btn btn-default btn-sml claim" data-id="<%= task.id %>">Claim Task</button>
                 <% if current_user.id == @project.owner_id %>
 
-                  <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+                  <button class="btn btn-default btn-sml edit-task" data-id="<%= task.id %>">Edit Task</button>
+                </div>
                 <% end %>
               </ul>
             <% end %>
           </div>
         <% if current_user.id == @project.owner_id %>
-          <button class='new-task-button'>Add Task</button>
+          <button class='btn btn-default btn-sml new-task-button'>Add Task</button>
 
         <% end %>
 
@@ -60,7 +62,7 @@
 
                 <% if current_user.id == @project.owner_id %>
 
-                  <button class="edit-task" data-id="<%= task.id %>">Edit Task</button>
+                  <button class="btn btn-default btn-sml edit-task" data-id="<%= task.id %>">Edit Task</button>
                 <% end %>
               </ul>
 
