@@ -5,7 +5,7 @@
 
 ## Overview and Motivation
 
-The CrowdCare Application was created in order to foster volunteer efforts in close-knit social circles. We designed the app as a "volunteer virtual pot luck", wherein the creator of a Vounteer Project can create tasks that are needed for the specific project. These tasks are placed in three states, once created, assigned, completed and signed-off. These "states" create a checks and balances system between the volunteer and the project owner, in regards to tasks. 
+The CrowdCare Application was created in order to foster volunteer efforts in close-knit social circles. We designed the app as a "volunteer virtual pot luck", wherein the creator of a Vounteer Project can create tasks that are needed for the specific project. These tasks are placed in three states, once created, assigned, completed and signed-off. These "states" create a checks and balances system between the volunteer and the project owner, in regards to task completion.
 
 
 ## Our Approach
@@ -108,7 +108,7 @@ This program utilizes our internal APIs.
 
 ## Challenges 
 
-
+One of our major challenges in our project was not with Rails, rather with our CSS styling. After developing our own styles and grid system, we found ourselves, converting over to Bootstrap, due to time and lack of our own documentation. We found this to be both necessary and challenging, as we needed to find a system, where we could rely on convention, but at the same time, not begin from ground zero with styling. We found that we lost some styling control, which was troublesome, yet gained a standard method of styling, so that we could all work on implementation, as a team.
 
 ## What's Next for CrowdCare? - Future Development Plans
    
