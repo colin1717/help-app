@@ -1,7 +1,7 @@
 # CrowdCare - Version 1.0 - May 30, 2016
 
 ## Live Link to CrowdCare Application:
-   enter link here
+   https://stark-ocean-76448.herokuapp.com/
 
 ## Overview and Motivation
 
@@ -93,13 +93,13 @@ We approached creating this app with the MVP in mind. We utilized a MOSCOW strat
 
 ## Installation Dependencies
 
-* Ruby - 
+* Ruby - ver 2.3.1
 
-* Rails -
+* Ruby on Rails - ver 4.2.6
 
-* RubyGems -
+* PostgreSQL - ver 9.5.3
 
-* PostgreSQL -
+* Devise - 3.2.0
 
 
 ## API Reference
@@ -107,6 +107,7 @@ We approached creating this app with the MVP in mind. We utilized a MOSCOW strat
 This program utilizes our internal APIs.
 
 ## Challenges 
+
 
 
 ## What's Next for CrowdCare? - Future Development Plans
