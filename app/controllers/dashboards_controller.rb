@@ -1,7 +1,7 @@
 class DashboardsController < ApplicationController
 
   def show
-    @projects = Project.limit(4)
+    @projects = Project.limit(6)
   end
 
 end
