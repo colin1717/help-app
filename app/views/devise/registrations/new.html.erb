@@ -1,40 +1,33 @@
-
 <div class="row hero-overlay-bg">
-  <div class="col-3"><p></p></div>
-  <div class="col-6" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
-  <div class="row">
-    <div class="col-3">
-      <p></p>
-    </div>
-    <div class="col-6">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-          <div class="field field-txt">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
-          <div class="field field-txt">
-            <%= f.label :password %>
-              <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "off" %>
+  <div class="container-fluid">
+    <div class="col-sm-4 col-sm-offset-4" id="deviseWrapperOutside"><h2 id="FormTitleArea">Sign up for HelpApp</h2>
+      <div class=' col-sm-8' id='form-fields'>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="form-group">
+          <%= f.label :email, class: 'col-sm-12 control-label'  %>
+          <div class="col-sm-12">
+              <%= f.text_field :email, autofocus: true, class: 'form-control'  %>
           </div>
-          <div class="field field-txt">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <%= f.label :password, class: "col-sm-12 control-label" %>
+          <div class="col-sm-12">
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
           </div>
+          <%= f.label :password_confirmation, class: "col-sm-12 control-label" %>
+          <div class="col-sm-12">
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+          <div class="col-sm-12">
+              <%= f.submit "Sign up", class: "btn btn-primary" %>
+          </div>
+          <div class="col-sm-offset-3 col-sm-6">
+              <%= render "devise/shared/links" %>
+          </div>
+        </div>
+          <% end %>
+        </div>
 
-          <div class="actions">
-            <%= f.submit "Sign up" %>
-          </div>
-            <% end %>
-        </div>
-        <div class="row">
-          <%= render "devise/shared/links" %>
-        </div>
-      </div>
-      <div class="col-3"><p></p></div>
-      </div>
     </div>
-  <div class="col-3"><p></p></div>
+
+  </div>
 </div>

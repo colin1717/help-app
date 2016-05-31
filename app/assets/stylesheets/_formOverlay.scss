@@ -6,6 +6,7 @@
   background-color: lighten($mdBlue,10%);
   // margin-left: 20%;
   // margin-right: 20%;
+  min-width: 400px;
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 1em;
@@ -75,4 +76,27 @@
 
 #new_user input{
   width: 22em;
+}
+div.form-group input.form-control{
+  padding: 10px;
+}
+
+
+#form-fields input.btn.form-control{
+
+}
+#form-fields{
+  line-height: 30px;
+  color:black;
+}
+form#new_user.new_user{
+  height:325px;
+  width: 360px;
+}
+
+div#error_explanation{
+  width:324px;
+}
+@media screen {
+
 }
