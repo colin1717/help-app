@@ -78,13 +78,19 @@
   }
 }
 
-
-
 button.btn.btn-default.btn-sml.complete{
       background-color: #13CBB8;
       color:black;
       &:hover{
         color:white;
       }
+}
+
+#new-task h1 {
+  color: white;
+}
+
+label {
+  color: white;
 }
 
