@@ -108,10 +108,15 @@ This program utilizes our internal APIs.
 
 ## Challenges 
 
+Initially, we encountered a bit of a challenge, when attempting to implement our state machine via a readily available RubyGem. Once implemented, we found that the gem was depricated and would not work with our current version of Rails. We solved this challenge by rolling our own state machine, to transition the state of our current tasks inside of Projects. 
+
 One of our major challenges in our project was not with Rails, rather with our CSS styling. After developing our own styles and grid system, we found ourselves, converting over to Bootstrap, due to time and lack of our own documentation. We found this to be both necessary and challenging, as we needed to find a system, where we could rely on convention, but at the same time, not begin from ground zero with styling. We found that we lost some styling control, which was troublesome, yet gained a standard method of styling, so that we could all work on implementation, as a team.
 
 ## What's Next for CrowdCare? - Future Development Plans
    
+In the future, we'd like to allow users to upload images to their projects, as well as to share projects within their social circles on social media. We'd also like to have our front page pull in the most recent projects and show them in thumbnails on the bottom of the Welcome Screen.
+
+We'd also like to implement a chat feature, so that project creators can chat with volunteers about their projects and tasks. 
    
 
 
