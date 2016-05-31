@@ -98,6 +98,7 @@ button a {
 
 .button-row {
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   padding-left: 30px;
 
@@ -289,7 +290,7 @@ textarea {
   color:black;
 }
 .claim {
-  margin-right: 10px;
+  //margin-right: 25px;
   margin-bottom: 4px;
   background-color: #13CBB8;
   width: 100px;
@@ -327,4 +328,5 @@ textarea {
 .claim-edit-buttons {
   display: flex;
   justify-content: space-around;
+  margin-right: 10px;
 }
