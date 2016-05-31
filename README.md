@@ -32,6 +32,9 @@ We approached creating this app with the MVP in mind. We utilized a MOSCOW strat
 
 ## Wire Frames
 
+![alt tag](/HelpAppERDInitialWireframes.png?raw=true)
+![alt tag](/HelpAppERDCreateNewProjectandTasks.png?raw=true)
+
 
 ## Technologies
 
