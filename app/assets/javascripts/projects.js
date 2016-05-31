@@ -35,7 +35,7 @@ function submitNew(){
 
 function populateNew(data){
   $('.available-tasks-list').prepend(
-    "<ul><li>" + data.name + '</li><div class="button-row"><button class="claim" data-id="' + data.id + '">Claim Task</button><br><button class="edit-task" data-id="'+ data.id + '">Edit Task</button></div>'
+    "<ul><li>" + data.name + '</li><div class="button-row"><button class="claim btn btn-default btn-sml" data-id="' + data.id + '">Claim Task</button><br><button class="btn btn-default btn-sml edit-task" data-id="'+ data.id + '">Edit Task</button></div>'
 
     );
     taskEventSet();
