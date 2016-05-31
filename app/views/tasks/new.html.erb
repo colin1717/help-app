@@ -1,5 +1,6 @@
 <h1>New Task</h1>
 
 <%= render 'form' %>
+<hr>
 
-<%= link_to 'Back', project_tasks_path %>
+<%= link_to '<button type="button" id="back-button" class="btn btn-default btn-sml buttons">Back</button>'.html_safe, project_path(@project) %>
