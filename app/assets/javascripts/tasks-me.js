@@ -1,4 +1,4 @@
-var myTasksReady = function($) {
+var myTasksReady = function() {
   $('.complete').click(function(){
    var taskId = $(this).data().id
    var projectId = $(this).data().projectid
