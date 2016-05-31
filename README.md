@@ -27,8 +27,13 @@ We approached creating this app with the MVP in mind. We utilized a MOSCOW strat
          
 ## ERD
 
-![alt tag](/path/file.png)
+![alt tag](/crowdCareErd.png?raw=true)
+
+
 ## Wire Frames
+
+![alt tag](/HelpAppERDInitialWireframes.png?raw=true)
+![alt tag](/HelpAppERDCreateNewProjectandTasks.png?raw=true)
 
 
 ## Technologies
