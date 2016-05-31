@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+var projectReady = function() {
   $('.claim').click(function(){
    var taskId = $(this).data().id
    var projectId = window.location.pathname.split('/').pop()
@@ -19,4 +19,6 @@ $(document).ready(function($) {
    });
 
   })
-});
+};
+
+$(document).on('page:load ready', projectReady);
