@@ -20,3 +20,27 @@ margin-bottom: 50px;
   min-width: 300px;
   border-color: black;
 }
+
+.header-dashboard {
+  color: white;
+}
+
+.buttons {
+    margin: 10px 10px 60px 10px;
+    background-color: #13CBB8;
+    width: 125px;
+    border-radius: 3px;
+
+    &:hover {
+      color: white;
+      background-color: #13CBB8;
+    }
+    a {
+      color: white;
+      text-align: center;
+    }
+}
+
+hr {
+  width: 700px;
+}
