@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'projects/me', to: 'projects#me'
 
   resources :projects do
-      resources :tasks do
+      resources :tasks, except: :index do
         member do
           put 'claim'
           put 'complete'

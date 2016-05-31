@@ -6,9 +6,10 @@ class TasksController < ApplicationController
 
   # GET /tasks
   # GET /tasks.json
-  def index
-    @tasks = Task.where(project_id: @project.id)
-  end
+  # removed because not using
+  # def index
+  #   @tasks = Task.where(project_id: @project.id)
+  # end
 
   # GET /tasks/1
   # GET /tasks/1.json
