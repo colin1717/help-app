@@ -1,12 +1,8 @@
 
-<div class="row hero-overlay-bg">
-  <div class="col-3"><p></p></div>
-  <div class="col-6" id="deviseWrapperOutside"><h2 class="hidden-sm" id="FormTitleArea">Sign up for HelpApp</h2>
-  <div class="row">
-    <div class="col-3">
-      <p></p>
-    </div>
-    <div class="col-6">
+<div class="row hero-overlay-bg no-gutter">
+  <div class="continer-fluid no-gutter">
+  <div class="col-sm-4 col-sm-offset-4 no-gutter" id="deviseWrapperOutside"><h2 class="hidden-sm hidden-xs" id="FormTitleArea">Sign up for HelpApp</h2>
+    <div class="col-sm-4 col-sm-offset-2">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
           <div class="field field-txt">
@@ -29,12 +25,13 @@
           </div>
             <% end %>
         </div>
+
         <div class="row">
+          <div class="col-sm-12">
           <%= render "devise/shared/links" %>
+          </div>
         </div>
       </div>
-      <div class="col-3"><p></p></div>
       </div>
     </div>
-  <div class="col-3"><p></p></div>
 </div>
