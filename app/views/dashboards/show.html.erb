@@ -1,7 +1,8 @@
 
 <!-- container adds margins to each side -->
 <div class="container-fluid">
-      <h1 class="header-dashboard">Here are some active projects</h1>
+      <h1 class="header-dashboard">Below are a few of our active projects. </h1>
+      <hr>
   <div class="row no-gutters" id="dashboard-tasks">
 
     <% @projects.each do |p| %>
@@ -19,4 +20,6 @@
     </div>
     <% end %>
   </div>
+
+  <%= link_to '<button type="button" class="btn btn-default btn-sml buttons">Add a Project</button>'.html_safe, new_project_path %>
 </div>
