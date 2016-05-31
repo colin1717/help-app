@@ -226,12 +226,17 @@ button a {
   .hr-small{
     width: 350px;
   }
+
 }
 
 .completed-tasks {
   li {
     margin-top: 15px;
   }
+}
+
+textarea {
+  color: black;
 }
 
 #edit-delete-button-list {
@@ -269,9 +274,17 @@ button a {
     }
 }
 
+
 #project-name {
   text-decoration: underline;
 }
 
 
+.field_with_errors {
+  margin:0 auto;
 
+}
+#error_explanation{
+  margin: 15px auto;
+  color:black;
+}
